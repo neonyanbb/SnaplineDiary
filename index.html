@@ -7,7 +7,7 @@
 <title>时线日记 · Snapline Diary</title>
 <link rel="icon" type="image/png" href="images/sharp/favicon-32.png">
 <link rel="apple-touch-icon" href="images/sharp/apple-touch-icon.png">
-<link rel="preload" as="image" href="images/sharp/logo-68.png" imagesizes="34px" fetchpriority="high">
+<link rel="preload" as="image" href="images/sharp-webp/logo-68.webp" imagesizes="34px" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -481,7 +481,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
 <nav id="main-nav">
   <div class="nav-inner">
     <a class="nav-logo" onclick="goTop()">
-      <img src="images/sharp/logo-68.png" alt="Logo" width="34" height="34" loading="eager" decoding="sync" fetchpriority="high">
+      <img src="images/sharp-webp/logo-68.webp" alt="Logo" width="34" height="34" loading="eager" decoding="sync" fetchpriority="high">
       <span class="nav-brand" data-i18n="appName">时线日记</span>
     </a>
     <button type="button" class="nav-toggle" id="nav-toggle" aria-label="打开菜单" aria-expanded="false" onclick="toggleNav()">☰</button>
@@ -539,9 +539,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
       </div>
       <div class="hero-vis">
         <div class="phone-stack">
-          <div class="ph ph-l"><img src="images/sharp/iphone2-lg.webp.png" alt="App Screenshot"></div>
-          <div class="ph ph-r"><img src="images/sharp/iphone1-lg.webp.png" alt="App Screenshot"></div>
-          <div class="ph ph-main"><img src="images/sharp/iphone4-lg.webp.png" alt="App Screenshot"></div>
+          <div class="ph ph-l"><img src="images/sharp-webp/iphone2-sm.webp" srcset="images/sharp-webp/iphone2-sm.webp 320w, images/sharp-webp/iphone2-lg.webp 621w" sizes="(max-width: 640px) 42vw, (max-width: 1024px) 34vw, 208px" alt="App Screenshot" decoding="async"></div>
+          <div class="ph ph-r"><img src="images/sharp-webp/iphone1-sm.webp" srcset="images/sharp-webp/iphone1-sm.webp 320w, images/sharp-webp/iphone1-lg.webp 621w" sizes="(max-width: 640px) 42vw, (max-width: 1024px) 34vw, 208px" alt="App Screenshot" decoding="async"></div>
+          <div class="ph ph-main"><img src="images/sharp-webp/iphone4-sm.webp" srcset="images/sharp-webp/iphone4-sm.webp 320w, images/sharp-webp/iphone4-lg.webp 621w" sizes="(max-width: 400px) 74vw, (max-width: 640px) 72vw, (max-width: 1024px) 58vw, 258px" alt="App Screenshot" decoding="async" fetchpriority="high"></div>
         </div>
       </div>
     </div>
@@ -600,7 +600,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
       </div>
       <div class="show-ph">
         <div class="ph-glow"></div>
-        <div class="ph-d"><img src="images/sharp/iphone3-lg.webp.png" alt="Timeline"></div>
+        <div class="ph-d"><img src="images/sharp-webp/iphone3-sm.webp" srcset="images/sharp-webp/iphone3-sm.webp 320w, images/sharp-webp/iphone3-lg.webp 621w" sizes="(max-width: 768px) 78vw, 252px" alt="Timeline" loading="lazy" decoding="async"></div>
       </div>
     </div>
     <div class="show-item rev reveal" style="transition-delay:.1s">
@@ -617,7 +617,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
       </div>
       <div class="show-ph">
         <div class="ph-glow"></div>
-        <div class="ph-d"><img src="images/sharp/iphone4-lg.webp.png" alt="Search"></div>
+        <div class="ph-d"><img src="images/sharp-webp/iphone4-sm.webp" srcset="images/sharp-webp/iphone4-sm.webp 320w, images/sharp-webp/iphone4-lg.webp 621w" sizes="(max-width: 768px) 78vw, 252px" alt="Search" loading="lazy" decoding="async"></div>
       </div>
     </div>
     <div class="show-item reveal" style="transition-delay:.2s">
@@ -634,7 +634,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
       </div>
       <div class="show-ph">
         <div class="ph-glow"></div>
-        <div class="ph-d"><img src="images/sharp/iphone5-lg.webp.png" alt="Memory Curve"></div>
+        <div class="ph-d"><img src="images/sharp-webp/iphone5-sm.webp" srcset="images/sharp-webp/iphone5-sm.webp 320w, images/sharp-webp/iphone5-lg.webp 621w" sizes="(max-width: 768px) 78vw, 252px" alt="Memory Curve" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </div>
@@ -714,7 +714,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
     <span class="sec-eye" data-i18n="pl_eye">多设备支持</span>
     <h2 class="sec-h" data-i18n-html="pl_h">iPhone 与 iPad<br><em>双端一致</em>体验</h2>
     <div class="plat-lay">
-      <div class="ipad-wrap reveal"><img src="images/sharp/ipad1-lg.webp.png" alt="iPad Screenshot"></div>
+      <div class="ipad-wrap reveal"><img src="images/sharp-webp/ipad1-sm.webp" srcset="images/sharp-webp/ipad1-sm.webp 480w, images/sharp-webp/ipad1-lg.webp 900w" sizes="(max-width: 1024px) 92vw, 560px" alt="iPad Screenshot" loading="lazy" decoding="async"></div>
       <div class="plat-pts">
         <div class="pt reveal" style="transition-delay:.08s"><div class="pt-ic">📱</div><div><div class="pt-t" data-i18n="pl1t">iPhone · 随时随地记录</div><div class="pt-d" data-i18n="pl1d">纵向主信息流，单手即可完成快速记录。搜索与详情跳转路径清晰，随时随地都能流畅使用。</div></div></div>
         <div class="pt reveal" style="transition-delay:.16s"><div class="pt-ic">🖥️</div><div><div class="pt-t" data-i18n="pl2t">iPad · 分栏精读模式</div><div class="pt-d" data-i18n="pl2d">左侧时间线 + 右侧详情的分栏视图，信息密度更高，适合长时阅读与深度整理，回顾体验全面升级。</div></div></div>
@@ -800,7 +800,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:72px 0 0}
   <div class="w">
     <div class="foot-grid">
       <div>
-        <img class="fb-logo" src="images/sharp/logo-68.png" alt="Logo">
+        <img class="fb-logo" src="images/sharp-webp/logo-68.webp" alt="Logo" loading="lazy" decoding="async">
         <div class="fb-name" data-i18n="appName">时线日记</div>
         <p class="fb-desc" data-i18n="ft_desc">把每天生活与灵感记下来，用科学提醒回看你的高光时刻。</p>
       </div>
