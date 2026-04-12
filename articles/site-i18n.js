@@ -108,18 +108,14 @@
       share_title: '分享本文',
       share_wechat_aria: '朋友圈：扫码在微信内打开并分享',
       share_weibo_aria: '分享到微博',
-      share_qq_aria: '分享到 QQ 好友',
-      share_qzone_aria: '分享到 QQ 空间',
       share_douban_aria: '分享到豆瓣',
       share_copy_aria: '复制链接',
       share_x_aria: '分享到 X',
       share_facebook_aria: '分享到 Facebook',
       share_linkedin_aria: '分享到 LinkedIn',
-      share_instagram_aria: '分享到 Instagram',
+      share_instagram_aria: 'Instagram：复制正文链接，在 App 内粘贴使用',
       share_lbl_moments: '朋友圈',
       share_lbl_weibo: '微博',
-      share_lbl_qq: 'QQ',
-      share_lbl_qzone: 'QQ空间',
       share_lbl_douban: '豆瓣',
       share_lbl_copy: '复制链接',
       share_lbl_x: 'X',
@@ -129,7 +125,9 @@
       share_copy: '复制链接',
       share_wechat_modal_title: '分享到朋友圈',
       share_wechat_tip:
-        '用微信<strong>扫一扫</strong>在内置浏览器打开本页，再通过右上角「···」菜单<strong>分享到朋友圈</strong>或转发给好友；也可先点下方按钮<strong>复制链接</strong>，粘贴到微信会话。',
+        '用微信<strong>扫一扫</strong>在内置浏览器打开本页，再通过右上角「···」菜单<strong>分享到朋友圈</strong>或转发给好友；也可先点下方按钮<strong>复制链接</strong>，粘贴到微信会话。<br><br><small>在微信内打开该链接时，可展示标题、摘要与预览图（本页已配置 Open Graph 元数据）。<br><strong>说明：</strong>微信<strong>不向网页提供</strong>从系统浏览器（如 Safari）<strong>一键跳转到朋友圈发文界面</strong>的公开接口，因此需先在内置浏览器中打开本文，再通过「···」分享。</small>',
+      share_instagram_toast:
+        '链接已复制。\n\nInstagram 不支持从网页一键发帖：请打开 Instagram，将链接贴在贴文说明、个人简介或快拍的「链接」贴纸中；好友点击即可打开本页。',
       modal_close_aria: '关闭',
       share_copy_ok: '链接已复制',
       share_copy_fail: '复制失败，请从地址栏手动复制',
@@ -214,18 +212,14 @@
       share_title: 'Share this article',
       share_wechat_aria: 'WeChat Moments: scan QR to open in WeChat, then share',
       share_weibo_aria: 'Share to Weibo',
-      share_qq_aria: 'Share to QQ friends',
-      share_qzone_aria: 'Share to Qzone',
       share_douban_aria: 'Share to Douban',
       share_copy_aria: 'Copy link',
       share_x_aria: 'Share to X',
       share_facebook_aria: 'Share to Facebook',
       share_linkedin_aria: 'Share to LinkedIn',
-      share_instagram_aria: 'Share to Instagram',
+      share_instagram_aria: 'Instagram: copy article link for use in the app',
       share_lbl_moments: 'Moments',
       share_lbl_weibo: 'Weibo',
-      share_lbl_qq: 'QQ',
-      share_lbl_qzone: 'Qzone',
       share_lbl_douban: 'Douban',
       share_lbl_copy: 'Copy link',
       share_lbl_x: 'X',
@@ -235,7 +229,9 @@
       share_copy: 'Copy link',
       share_wechat_modal_title: 'Share to WeChat Moments',
       share_wechat_tip:
-        '<strong>Scan</strong> with WeChat to open this page in the in-app browser, then use the ··· menu to <strong>share to Moments</strong> or forward to a chat. You can also <strong>copy the link</strong> below and paste it into WeChat.',
+        '<strong>Scan</strong> with WeChat to open this page in the in-app browser, then use the ··· menu to <strong>share to Moments</strong> or forward to a chat. You can also <strong>copy the link</strong> below and paste it into WeChat.<br><br><small>When opened in-app, the link can show title, summary, and a preview image (Open Graph on this page).<br><strong>Note:</strong> WeChat does <strong>not</strong> provide a public URL to jump from Safari/Chrome <strong>straight into the Moments composer</strong>—open this page inside WeChat first, then share via ···.</small>',
+      share_instagram_toast:
+        'Link copied.\n\nInstagram does not allow posting from websites: open the Instagram app and paste the link in your caption, bio, or the link sticker in Stories. Followers tap to open this page.',
       modal_close_aria: 'Close',
       share_copy_ok: 'Link copied',
       share_copy_fail: 'Could not copy — copy from the address bar',
@@ -319,18 +315,14 @@
       share_title: 'Compartir',
       share_wechat_aria: 'Momentos de WeChat: escanear QR y compartir',
       share_weibo_aria: 'Compartir en Weibo',
-      share_qq_aria: 'Compartir en QQ',
-      share_qzone_aria: 'Compartir en Qzone',
       share_douban_aria: 'Compartir en Douban',
       share_copy_aria: 'Copiar enlace',
       share_x_aria: 'Compartir en X',
       share_facebook_aria: 'Compartir en Facebook',
       share_linkedin_aria: 'Compartir en LinkedIn',
-      share_instagram_aria: 'Compartir en Instagram',
+      share_instagram_aria: 'Instagram: copiar enlace para usar en la app',
       share_lbl_moments: 'Momentos',
       share_lbl_weibo: 'Weibo',
-      share_lbl_qq: 'QQ',
-      share_lbl_qzone: 'Qzone',
       share_lbl_douban: 'Douban',
       share_lbl_copy: 'Copiar',
       share_lbl_x: 'X',
@@ -340,7 +332,9 @@
       share_copy: 'Copiar enlace',
       share_wechat_modal_title: 'Compartir en Momentos (WeChat)',
       share_wechat_tip:
-        '<strong>Escanea</strong> con WeChat para abrir en el navegador interno y usa el menú ··· para <strong>compartir en Momentos</strong> o reenviar. También puedes <strong>copiar el enlace</strong> y pegarlo en WeChat.',
+        '<strong>Escanea</strong> con WeChat para abrir en el navegador interno y usa el menú ··· para <strong>compartir en Momentos</strong> o reenviar. También puedes <strong>copiar el enlace</strong> y pegarlo en WeChat.<br><br><small>En WeChat, el enlace puede mostrar título, resumen e imagen (Open Graph).<br><strong>Nota:</strong> WeChat <strong>no ofrece</strong> un enlace público para abrir el editor de Momentos desde Safari/Chrome: abre primero la página dentro de WeChat y usa ···.</small>',
+      share_instagram_toast:
+        'Enlace copiado.\n\nInstagram no permite publicar desde la web: abre la app y pega el enlace en el pie de foto, la biografía o el sticker de enlace en Historias.',
       modal_close_aria: 'Cerrar',
       share_copy_ok: 'Enlace copiado',
       share_copy_fail: 'No se pudo copiar — copia desde la barra de dirección',
@@ -424,18 +418,14 @@
       share_title: 'Partager',
       share_wechat_aria: 'Moments WeChat : scanner le QR puis partager',
       share_weibo_aria: 'Partager sur Weibo',
-      share_qq_aria: 'Partager sur QQ',
-      share_qzone_aria: 'Partager sur Qzone',
       share_douban_aria: 'Partager sur Douban',
       share_copy_aria: 'Copier le lien',
       share_x_aria: 'Partager sur X',
       share_facebook_aria: 'Partager sur Facebook',
       share_linkedin_aria: 'Partager sur LinkedIn',
-      share_instagram_aria: 'Partager sur Instagram',
+      share_instagram_aria: 'Instagram : copier le lien pour l’app',
       share_lbl_moments: 'Moments',
       share_lbl_weibo: 'Weibo',
-      share_lbl_qq: 'QQ',
-      share_lbl_qzone: 'Qzone',
       share_lbl_douban: 'Douban',
       share_lbl_copy: 'Copier',
       share_lbl_x: 'X',
@@ -445,7 +435,9 @@
       share_copy: 'Copier le lien',
       share_wechat_modal_title: 'Partager dans Moments (WeChat)',
       share_wechat_tip:
-        '<strong>Scannez</strong> avec WeChat pour ouvrir dans le navigateur intégré, puis le menu ··· pour <strong>partager dans Moments</strong> ou transférer. Vous pouvez aussi <strong>copier le lien</strong> ci-dessous.',
+        '<strong>Scannez</strong> avec WeChat pour ouvrir dans le navigateur intégré, puis le menu ··· pour <strong>partager dans Moments</strong> ou transférer. Vous pouvez aussi <strong>copier le lien</strong> ci-dessous.<br><br><small>Dans WeChat, le lien peut afficher titre, résumé et aperçu (Open Graph).<br><strong>Remarque :</strong> WeChat <strong>ne fournit pas</strong> d’URL publique pour ouvrir la rédaction des Moments depuis Safari/Chrome : ouvrez d’abord la page dans WeChat, puis ···.</small>',
+      share_instagram_toast:
+        'Lien copié.\n\nInstagram ne permet pas de publier depuis le site : ouvrez l’app et collez le lien dans la légende, la bio ou le sticker lien des Stories.',
       modal_close_aria: 'Fermer',
       share_copy_ok: 'Lien copié',
       share_copy_fail: 'Échec — copiez depuis la barre d’adresse',
@@ -529,18 +521,14 @@
       share_title: 'Поделиться',
       share_wechat_aria: 'Моменты WeChat: сканировать QR и поделиться',
       share_weibo_aria: 'Поделиться в Weibo',
-      share_qq_aria: 'Поделиться в QQ',
-      share_qzone_aria: 'Поделиться в Qzone',
       share_douban_aria: 'Поделиться в Douban',
       share_copy_aria: 'Копировать ссылку',
       share_x_aria: 'Поделиться в X',
       share_facebook_aria: 'Поделиться в Facebook',
       share_linkedin_aria: 'Поделиться в LinkedIn',
-      share_instagram_aria: 'Поделиться в Instagram',
+      share_instagram_aria: 'Instagram: скопировать ссылку для приложения',
       share_lbl_moments: 'Моменты',
       share_lbl_weibo: 'Weibo',
-      share_lbl_qq: 'QQ',
-      share_lbl_qzone: 'Qzone',
       share_lbl_douban: 'Douban',
       share_lbl_copy: 'Ссылка',
       share_lbl_x: 'X',
@@ -550,7 +538,9 @@
       share_copy: 'Копировать ссылку',
       share_wechat_modal_title: 'Поделиться в «Моментах» (WeChat)',
       share_wechat_tip:
-        '<strong>Отсканируйте</strong> камерой WeChat, откройте страницу во встроенном браузере и через меню ··· выберите <strong>«Моменты»</strong> или пересылку в чат. Либо <strong>скопируйте ссылку</strong> ниже и вставьте в WeChat.',
+        '<strong>Отсканируйте</strong> камерой WeChat, откройте страницу во встроенном браузере и через меню ··· выберите <strong>«Моменты»</strong> или пересылку в чат. Либо <strong>скопируйте ссылку</strong> ниже и вставьте в WeChat.<br><br><small>В WeChat ссылка может показать заголовок, описание и превью (Open Graph).<br><strong>Важно:</strong> WeChat <strong>не даёт</strong> публичной ссылки, чтобы из Safari/Chrome <strong>сразу открыть экран публикации в «Моментах»</strong> — сначала откройте страницу внутри WeChat, затем ···.</small>',
+      share_instagram_toast:
+        'Ссылка скопирована.\n\nInstagram не публикует с сайта: откройте приложение и вставьте ссылку в подпись, профиль или стикер ссылки в Stories.',
       modal_close_aria: 'Закрыть',
       share_copy_ok: 'Ссылка скопирована',
       share_copy_fail: 'Не удалось скопировать — скопируйте из адресной строки',
@@ -616,18 +606,29 @@
     var modal = document.getElementById('wx-share-modal');
     var qrImg = document.getElementById('wx-share-qr');
     var toast = document.getElementById('art-share-toast');
+    /** 正式域名：分享与 OG 一致，便于各平台抓取链接卡片（标题/摘要/图） */
+    var SHARE_ARTICLE_URL = 'https://www.snaplinediary.cn/articles/part-1-mindset.html';
 
-    function showToast(msg) {
+    function getMetaDescription() {
+      var m = document.querySelector('meta[name="description"]');
+      return (m && m.getAttribute('content')) || '';
+    }
+
+    function showToast(msg, opts) {
+      opts = opts || {};
+      var ms = opts.ms != null ? opts.ms : 2200;
       if (!toast) {
         window.alert(msg);
         return;
       }
       toast.textContent = msg;
+      toast.classList.toggle('art-share-toast--long', !!opts.long);
       toast.classList.add('show');
       clearTimeout(showToast._t);
       showToast._t = setTimeout(function () {
         toast.classList.remove('show');
-      }, 2200);
+        toast.classList.remove('art-share-toast--long');
+      }, ms);
     }
 
     function fallbackCopy(text) {
@@ -648,18 +649,60 @@
     }
 
     function copyPageUrl() {
-      var pageUrl = location.href.split('#')[0];
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(pageUrl).then(
+        navigator.clipboard.writeText(SHARE_ARTICLE_URL).then(
           function () {
             showToast(s('share_copy_ok'));
           },
           function () {
-            fallbackCopy(pageUrl);
+            fallbackCopy(SHARE_ARTICLE_URL);
           }
         );
       } else {
-        fallbackCopy(pageUrl);
+        fallbackCopy(SHARE_ARTICLE_URL);
+      }
+    }
+
+    function copyForInstagram() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(SHARE_ARTICLE_URL).then(
+          function () {
+            showToast(s('share_instagram_toast'), { ms: 5200, long: true });
+          },
+          function () {
+            try {
+              var ta = document.createElement('textarea');
+              ta.value = SHARE_ARTICLE_URL;
+              ta.setAttribute('readonly', '');
+              ta.style.position = 'fixed';
+              ta.style.left = '-9999px';
+              document.body.appendChild(ta);
+              ta.select();
+              var ok = document.execCommand('copy');
+              document.body.removeChild(ta);
+              if (ok) showToast(s('share_instagram_toast'), { ms: 5200, long: true });
+              else showToast(s('share_copy_fail'));
+            } catch (_) {
+              showToast(s('share_copy_fail'));
+            }
+          }
+        );
+      } else {
+        try {
+          var ta2 = document.createElement('textarea');
+          ta2.value = SHARE_ARTICLE_URL;
+          ta2.setAttribute('readonly', '');
+          ta2.style.position = 'fixed';
+          ta2.style.left = '-9999px';
+          document.body.appendChild(ta2);
+          ta2.select();
+          var ok2 = document.execCommand('copy');
+          document.body.removeChild(ta2);
+          if (ok2) showToast(s('share_instagram_toast'), { ms: 5200, long: true });
+          else showToast(s('share_copy_fail'));
+        } catch (_) {
+          showToast(s('share_copy_fail'));
+        }
       }
     }
 
@@ -672,12 +715,12 @@
 
     function openWechatModal() {
       if (!modal || !qrImg) return;
-      var pageUrl = location.href.split('#')[0];
       var titleText = '';
       var h1 = document.querySelector('h1.art-h1');
       if (h1) titleText = h1.textContent.trim();
       qrImg.src =
-        'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(pageUrl);
+        'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' +
+        encodeURIComponent(SHARE_ARTICLE_URL);
       qrImg.alt = titleText || s('appName');
       modal.hidden = false;
       modal.setAttribute('aria-hidden', 'false');
@@ -688,11 +731,13 @@
       var btn = e.target.closest('[data-share]');
       if (!btn) return;
       var k = btn.getAttribute('data-share');
-      var pageUrl = location.href.split('#')[0];
       var titleText = '';
       var h1 = document.querySelector('h1.art-h1');
       if (h1) titleText = h1.textContent.trim();
       if (!titleText) titleText = s('appName');
+
+      var summary = getMetaDescription().trim();
+      if (summary.length > 220) summary = summary.slice(0, 217) + '…';
 
       if (k === 'copy') {
         e.preventDefault();
@@ -705,39 +750,42 @@
         openWechatModal();
         return;
       }
+      if (k === 'instagram') {
+        e.preventDefault();
+        copyForInstagram();
+        return;
+      }
+
+      var excerpt = summary || titleText;
+      if (excerpt.length > 100) excerpt = excerpt.slice(0, 97) + '…';
+      var tweetText = titleText + '\n\n' + excerpt + '\n\n' + SHARE_ARTICLE_URL;
+      if (tweetText.length > 268) tweetText = titleText + '\n\n' + SHARE_ARTICLE_URL;
+
+      var liSummary = summary || titleText;
+      if (liSummary.length > 200) liSummary = liSummary.slice(0, 197) + '…';
 
       var links = {
         weibo:
           'http://service.weibo.com/share/share.php?url=' +
-          encodeURIComponent(pageUrl) +
+          encodeURIComponent(SHARE_ARTICLE_URL) +
           '&title=' +
-          encodeURIComponent(titleText),
-        qq:
-          'https://connect.qq.com/widget/shareqq/index.html?url=' +
-          encodeURIComponent(pageUrl) +
-          '&title=' +
-          encodeURIComponent(titleText) +
-          '&summary=' +
-          encodeURIComponent(titleText),
-        qzone:
-          'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' +
-          encodeURIComponent(pageUrl) +
-          '&title=' +
-          encodeURIComponent(titleText) +
-          '&summary=' +
           encodeURIComponent(titleText),
         douban:
           'https://www.douban.com/share/service?href=' +
-          encodeURIComponent(pageUrl) +
+          encodeURIComponent(SHARE_ARTICLE_URL) +
           '&name=' +
           encodeURIComponent(titleText),
-        x:
-          'https://twitter.com/intent/tweet?url=' +
-          encodeURIComponent(pageUrl) +
-          '&text=' +
-          encodeURIComponent(titleText),
-        facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl),
-        linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl),
+        x: 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText),
+        facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(SHARE_ARTICLE_URL),
+        linkedin:
+          'https://www.linkedin.com/shareArticle?mini=true&url=' +
+          encodeURIComponent(SHARE_ARTICLE_URL) +
+          '&title=' +
+          encodeURIComponent(titleText) +
+          '&summary=' +
+          encodeURIComponent(liSummary) +
+          '&source=' +
+          encodeURIComponent(s('appName')),
       };
 
       var u = links[k];

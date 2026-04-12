@@ -133,6 +133,7 @@ body.art-lang-ru .art-prose[data-prose-lang="ru"]{display:block!important}
 .art-modal-h{font-family:var(--font-serif);font-size:1.15rem;font-weight:500;color:var(--text);margin:0 0 12px;padding-right:28px}
 .art-modal-tip{font-size:14px;color:var(--text2);line-height:1.75;margin:0 0 16px;font-weight:300}
 .art-modal-tip strong{color:var(--text);font-weight:500}
+.art-modal-tip small{display:block;margin-top:2px;font-size:13px;opacity:.88;line-height:1.65}
 .art-modal-qr{display:flex;justify-content:center;margin-bottom:16px;padding:12px;background:var(--surface);border-radius:var(--radius-sm);border:1px solid var(--border)}
 .art-modal-qr img{display:block;width:200px;height:200px}
 .art-modal-copy{width:100%;justify-content:center}
@@ -140,6 +141,8 @@ body.art-lang-ru .art-prose[data-prose-lang="ru"]{display:block!important}
   background:var(--card);border:1px solid var(--border);border-radius:100px;font-size:13px;color:var(--text2);
   box-shadow:0 12px 40px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:400}
 .art-share-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.art-share-toast.art-share-toast--long{
+  border-radius:14px;max-width:min(92vw,320px);white-space:pre-line;line-height:1.55;text-align:left;font-size:12.5px;padding:14px 18px}
 
 .art-end-cta{margin-top:3.5rem;padding:28px 24px;background:linear-gradient(165deg,rgba(232,150,60,.08) 0%,var(--surface) 55%);
   border:1px solid rgba(232,150,60,.2);border-radius:var(--radius);text-align:center;max-width:var(--prose);margin-left:auto;margin-right:auto}
