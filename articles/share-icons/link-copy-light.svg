@@ -1,0 +1,5 @@
+<!-- 深色背景用：浅色链环图标 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E8963C" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+  <path d="M10 13a5 5 0 010-7l1-1a5 5 0 017 7l-1 1"/>
+  <path d="M14 11a5 5 0 010 7l-1 1a5 5 0 01-7-7l1-1"/>
+</svg>

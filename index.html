@@ -269,6 +269,32 @@ body.app-soon .plan-cta.s:hover,body.app-soon .plan-cta.p:hover{transform:none;o
 .case-tag{font-size:11px;color:var(--text3);background:var(--bg2);
   border:1px solid var(--border);padding:3px 9px;border-radius:100px}
 
+/* NOTES PREVIEW */
+.notes-sec{background:var(--bg)}
+.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;max-width:1100px}
+.note-prev-card{
+  display:block;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px 26px;text-decoration:none!important;color:inherit;
+  transition:all .28s ease;position:relative;overflow:hidden}
+.note-prev-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.note-prev-card:hover::before{opacity:1}
+.note-prev-card:hover{border-color:rgba(232,150,60,.22);transform:translateY(-4px);
+  box-shadow:0 18px 48px rgba(0,0,0,.25)}
+.note-prev-series{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:12px}
+.note-prev-t{font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:12px}
+.note-prev-sum{font-size:13.5px;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:16px}
+.note-prev-meta{font-size:12px;color:var(--text3)}
+.note-prev-meta:empty{display:none}
+.note-prev-soon{margin-top:14px;margin-bottom:0;font-size:12px;color:var(--accent);letter-spacing:.06em;font-weight:500}
+.note-prev-card.note-prev-card--soon{cursor:default;opacity:.88}
+.note-prev-card.note-prev-card--soon:hover{border-color:var(--border);transform:none;box-shadow:none}
+.note-prev-card.note-prev-card--soon:hover::before{opacity:0}
+.notes-foot{margin-top:36px}
+.notes-foot a.btn-s{display:inline-flex}
+@media(max-width:1000px){.notes-grid{grid-template-columns:repeat(2,1fr);max-width:920px}}
+@media(max-width:768px){.notes-grid{grid-template-columns:1fr;max-width:none}}
+
 /* PLATFORM */
 .plat-lay{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:60px}
 .ipad-wrap{
@@ -523,6 +549,7 @@ var _hmt = _hmt || [];
       <li><a onclick="goTo('features')" data-i18n="n_feat">功能</a></li>
       <li><a onclick="goTo('memory')" data-i18n="n_mem">记忆曲线</a></li>
       <li><a onclick="goTo('cases')" data-i18n="n_case">使用场景</a></li>
+      <li><a onclick="goTo('notes')" data-i18n="n_notes">用法手记</a></li>
       <li><a onclick="goTo('audience')" data-i18n="n_aud">适用人群</a></li>
       <li><a onclick="goTo('pro')" data-i18n="n_pro">Pro 版本</a></li>
       <li><a onclick="goTo('faq')" data-i18n="n_faq">常见问题</a></li>
@@ -836,6 +863,40 @@ var _hmt = _hmt || [];
   </div>
 </section>
 
+<!-- NOTES -->
+<section class="sec notes-sec" id="notes">
+  <div class="w">
+    <span class="sec-eye" data-i18n="notes_eye">用法手记</span>
+    <h2 class="sec-h" data-i18n-html="notes_h">用法心得<br><em>从功能到习惯</em></h2>
+    <p class="sec-d" data-i18n-html="notes_d">从<strong>产品由来到设计取舍</strong>，到<strong>长期使用中的方法与习惯</strong>——由创始人以文章写清「为什么做成这样」和「平常怎么用好」：既有<strong>叙事与心得</strong>，也有<strong>可照做的方法与细节</strong>，并会持续更新。</p>
+    <div class="notes-grid">
+      <a class="note-prev-card reveal" href="articles/part-1-mindset.html">
+        <div class="note-prev-series" data-i18n="notes_n1_series">系列 · 其一 · 全概</div>
+        <div class="note-prev-t" data-i18n="notes_n1_t">碎片化时代的注意力管理，从「刷完更空」到「看一个算一个」：用时线日记，把碎片信息流变成个人成长的养分</div>
+        <p class="note-prev-sum" data-i18n="notes_n1_sum">信息超载、注意力被切碎的年代：不靠硬扛戒屏，把值得停一下的收成时间线上的记录；辅以轻量加工与记忆曲线。</p>
+        <div class="note-prev-meta" data-i18n="notes_n1_meta">约 15 分钟</div>
+      </a>
+      <div class="note-prev-card note-prev-card--soon reveal" style="transition-delay:.08s" aria-disabled="true">
+        <div class="note-prev-series" data-i18n="notes_n2_series">系列 · 其二 · 功能篇</div>
+        <div class="note-prev-t" data-i18n="notes_n2_t">时间线主页与节点</div>
+        <p class="note-prev-sum" data-i18n="notes_n2_sum">一篇一功能：主界面按日分组、节点是什么、与搜索和详情的挂钩。</p>
+        <div class="note-prev-meta" data-i18n="notes_n2_meta"></div>
+        <p class="note-prev-soon" data-i18n="notes_n2_soon">更新中，敬请期待</p>
+      </div>
+      <div class="note-prev-card note-prev-card--soon reveal" style="transition-delay:.16s" aria-disabled="true">
+        <div class="note-prev-series" data-i18n="notes_n3_series">系列 · 其三 · 功能篇</div>
+        <div class="note-prev-t" data-i18n="notes_n3_t">Pro 备份与节点数据</div>
+        <p class="note-prev-sum" data-i18n="notes_n3_sum">metadata.json 里一条记录有哪些字段，如何与界面对照。</p>
+        <div class="note-prev-meta" data-i18n="notes_n3_meta"></div>
+        <p class="note-prev-soon" data-i18n="notes_n3_soon">更新中，敬请期待</p>
+      </div>
+    </div>
+    <div class="notes-foot">
+      <a class="btn-s" href="articles/index.html" data-i18n="notes_more">查看全部手记 →</a>
+    </div>
+  </div>
+</section>
+
 <!-- PLATFORM -->
 <section class="sec" id="platform">
   <div class="w">
@@ -1002,6 +1063,7 @@ var _hmt = _hmt || [];
         <ul class="fc-links">
           <li><a onclick="goTo('features')" data-i18n="ft_feat">功能介绍</a></li>
           <li><a onclick="goTo('memory')" data-i18n="ft_mem">记忆曲线</a></li>
+          <li><a href="articles/index.html" data-i18n="ft_notes">用法手记</a></li>
           <li><a onclick="goTo('pro')" data-i18n="ft_pro">Pro 版本</a></li>
           <li><a onclick="openDownload()" data-i18n="ft_dl">App Store 下载</a></li>
         </ul>
@@ -1212,7 +1274,7 @@ const TICKER = {
 
 const STR = {
   zh:{
-    appName:"时线日记",n_feat:"功能",n_mem:"记忆曲线",n_case:"使用场景",n_aud:"适用人群",n_pro:"Pro 版本",n_faq:"常见问题",n_dl:"立即下载",
+    appName:"时线日记",n_feat:"功能",n_mem:"记忆曲线",n_case:"使用场景",n_notes:"用法手记",n_aud:"适用人群",n_pro:"Pro 版本",n_faq:"常见问题",n_dl:"立即下载",
     h_eye:"现已在 App Store 上架",
     h_title:"记下此刻，<br>让<em>重要的事</em><br>真正留下来",
     h_sub:"时线日记是一款专为<strong>图文记录与长期回顾</strong>设计的 iPhone / iPad 应用。截图、照片、文字，按时间线自然串联；彩色标签一触即达；科学记忆曲线让你在最关键的时刻再次回看。",
@@ -1258,8 +1320,9 @@ const STR = {
     pr_btn:"永久解锁 Pro →",pr_hint:"一次购买 · 非订阅 · 支持家人共享",
     lg_t:"全球五大语言，本地化支持",
     fq_eye:"常见问题",fq_h:"遇到<em>疑惑</em>？<br>这里有答案",fq_d:"如果没有找到你的问题，欢迎<a href='mailto:neonyanbb@foxmail.com'>联系我们</a>，我们会尽快回复。",fq_em:"→ 发送邮件支持",
+    notes_eye:"用法手记",notes_h:"用法心得<br><em>从功能到习惯</em>",notes_d:"从<strong>产品由来到设计取舍</strong>，到<strong>长期使用中的方法与习惯</strong>——由创始人以文章写清「为什么做成这样」和「平常怎么用好」：既有<strong>叙事与心得</strong>，也有<strong>可照做的方法与细节</strong>，并会持续更新。",notes_more:"查看全部手记 →",notes_n1_series:"系列 · 其一 · 全概",notes_n1_t:"碎片化时代的注意力管理，从「刷完更空」到「看一个算一个」：用时线日记，把碎片信息流变成个人成长的养分",notes_n1_sum:"信息超载、注意力被切碎的年代：不靠硬扛戒屏，把值得停一下的收成时间线上的记录；辅以轻量加工与记忆曲线。",notes_n1_meta:"约 15 分钟",notes_n2_series:"系列 · 其二 · 功能篇",notes_n2_t:"时间线主页与节点",notes_n2_sum:"一篇一功能：主界面按日分组、节点是什么、与搜索和详情的挂钩。",notes_n2_meta:"",notes_n2_soon:"更新中，敬请期待",notes_n3_series:"系列 · 其三 · 功能篇",notes_n3_t:"Pro 备份与节点数据",notes_n3_sum:"metadata.json 里一条记录有哪些字段，如何与界面对照。",notes_n3_meta:"",notes_n3_soon:"更新中，敬请期待",
     ft_desc:"把每天的生活与灵感记录下来，用科学提醒回看你的高光时刻。",
-    ft_prod:"产品",ft_feat:"功能介绍",ft_mem:"记忆曲线",ft_pro:"Pro 版本",ft_dl:"App Store 下载",
+    ft_prod:"产品",ft_feat:"功能介绍",ft_mem:"记忆曲线",ft_notes:"用法手记",ft_pro:"Pro 版本",ft_dl:"App Store 下载",
     ft_sup:"支持",ft_faq:"常见问题",ft_contact:"联系我们",ft_priv:"隐私政策",ft_lang:"语言",
     ft_copy:"© 2026 时线日记 (Snapline Diary). All rights reserved.",ft_priv2:"隐私政策",ft_sup2:"技术支持",
     n_dl_soon:"敬请期待",h_eye_soon:"即将上架 App Store",
@@ -1268,7 +1331,7 @@ const STR = {
     toast_coming:"应用尚在 App Store 审核中，通过后将开放下载，感谢关注。"
   },
   en:{
-    appName:"Snapline Diary",n_feat:"Features",n_mem:"Memory Curve",n_case:"Use Cases",n_aud:"Who it's for",n_pro:"Pro",n_faq:"FAQ",n_dl:"Download",
+    appName:"Snapline Diary",n_feat:"Features",n_mem:"Memory Curve",n_case:"Use Cases",n_notes:"Field Notes",n_aud:"Who it's for",n_pro:"Pro",n_faq:"FAQ",n_dl:"Download",
     h_eye:"Now on the App Store",
     h_title:"Capture the moment.<br>Make <em>what matters</em><br>truly stick.",
     h_sub:"Snapline Diary is built for <strong>photo-and-text capture with long-term recall</strong>. Connect screenshots, photos, and notes on a timeline — color-coded hashtag tags organize everything, and a science-based memory curve makes sure you never forget what's important.",
@@ -1314,8 +1377,9 @@ const STR = {
     pr_btn:"Unlock Pro Forever →",pr_hint:"One-time · No subscription · Family Sharing",
     lg_t:"Available in 5 languages worldwide",
     fq_eye:"FAQ",fq_h:"Have <em>questions?</em><br>We've got answers.",fq_d:"If you can't find your answer here, <a href='mailto:neonyanbb@foxmail.com'>send us an email</a> — we'll get back to you quickly.",fq_em:"→ Email support",
+    notes_eye:"Field Notes",notes_h:"Usage insights<br><em>from features to habits</em>",notes_d:"From <strong>why it's built this way</strong> to <strong>methods and habits from long-term use</strong> — long-form notes by the founder: <strong>story and takeaways</strong>, plus <strong>practical steps you can try</strong>, updated over time.",notes_more:"Browse all notes →",notes_n1_series:"Series · Part 1 · Overview",notes_n1_t:"Attention in an age of fragmentation: from “emptier after scrolling” to “every view counts” — use Snapline Diary to turn fragmented feeds into nutrients for personal growth",notes_n1_sum:"When feeds fragment your attention: instead of fighting the screen, save what deserves a pause to your timeline—plus light processing and the memory curve.",notes_n1_meta:"~15 min",notes_n2_series:"Series · Part 2 · Feature",notes_n2_t:"Timeline home & entries",notes_n2_sum:"One feature per article: the day-grouped feed, what an entry is, and how search and detail connect.",notes_n2_meta:"",notes_n2_soon:"In progress — coming soon",notes_n3_series:"Series · Part 3 · Feature",notes_n3_t:"Pro backup & entry data",notes_n3_sum:"How each entry appears in metadata.json and how fields map to the UI.",notes_n3_meta:"",notes_n3_soon:"In progress — coming soon",
     ft_desc:"Capture life and inspiration every day — let science help you revisit your highlights.",
-    ft_prod:"Product",ft_feat:"Features",ft_mem:"Memory Curve",ft_pro:"Pro",ft_dl:"App Store Download",
+    ft_prod:"Product",ft_feat:"Features",ft_mem:"Memory Curve",ft_notes:"Field Notes",ft_pro:"Pro",ft_dl:"App Store Download",
     ft_sup:"Support",ft_faq:"FAQ",ft_contact:"Contact Us",ft_priv:"Privacy Policy",ft_lang:"Language",
     ft_copy:"© 2026 Snapline Diary. All rights reserved.",ft_priv2:"Privacy Policy",ft_sup2:"Support",
     n_dl_soon:"Coming soon",h_eye_soon:"Coming soon on the App Store",
@@ -1324,7 +1388,7 @@ const STR = {
     toast_coming:"The app is still in App Store review. Downloads will open once approved. Thanks for your patience."
   },
   es:{
-    appName:"Diario Cronología",n_feat:"Funciones",n_mem:"Curva de memoria",n_case:"Casos de uso",n_aud:"¿Para quién?",n_pro:"Pro",n_faq:"FAQ",n_dl:"Descargar",
+    appName:"Diario Cronología",n_feat:"Funciones",n_mem:"Curva de memoria",n_case:"Casos de uso",n_notes:"Notas de uso",n_aud:"¿Para quién?",n_pro:"Pro",n_faq:"FAQ",n_dl:"Descargar",
     h_eye:"Ya disponible en App Store",h_title:"Captura el momento.<br>Haz que <em>lo importante</em><br>dure para siempre.",
     h_sub:"Diario Cronología está diseñado para <strong>registrar fotos y texto con revisión a largo plazo</strong>. Conecta capturas, fotos y notas en una línea de tiempo — etiquetas de colores para organizarlo todo, y una curva de memoria científica para que nunca olvides lo que importa.",
     h_dl:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Descargar en App Store',
@@ -1368,7 +1432,8 @@ const STR = {
     pr_btn:"Desbloquear Pro →",pr_hint:"Pago único · Sin suscripción · Compartir en familia",
     lg_t:"Disponible en 5 idiomas en todo el mundo",
     fq_eye:"FAQ",fq_h:"¿Tienes <em>dudas?</em><br>Aquí las respuestas.",fq_d:"Si no encuentras tu respuesta, <a href='mailto:neonyanbb@foxmail.com'>escríbenos</a> y te responderemos rápidamente.",fq_em:"→ Enviar email",
-    ft_desc:"Registra tu vida e inspiración cada día.",ft_prod:"Producto",ft_feat:"Funciones",ft_mem:"Curva de memoria",ft_pro:"Pro",ft_dl:"Descargar",ft_sup:"Soporte",ft_faq:"FAQ",ft_contact:"Contacto",ft_priv:"Privacidad",ft_lang:"Idioma",
+    notes_eye:"Notas de uso",notes_h:"Ideas de uso<br><em>de la función al hábito</em>",notes_d:"De <strong>por qué está hecho así</strong> a <strong>métodos y hábitos de uso a largo plazo</strong> — artículos largos del fundador: <strong>relato y conclusiones</strong>, más <strong>pasos prácticos que puedes probar</strong>, actualizados con el tiempo.",notes_more:"Ver todas las notas →",notes_n1_series:"Serie · Parte 1 · Panorama",notes_n1_t:"Atención en la era de la fragmentación: de «más vacío tras el scroll» a «cada vista cuenta» — con Snapline Diary, convierte el feed en nutriente para tu crecimiento personal",notes_n1_sum:"Con saturación de información y atención fragmentada: en lugar de forcejear con la pantalla, guarda en la línea de tiempo lo que merece una pausa; con procesamiento ligero y curva de memoria.",notes_n1_meta:"~15 min",notes_n2_series:"Serie · Parte 2 · Función",notes_n2_t:"Inicio con línea de tiempo y nodos",notes_n2_sum:"Un artículo, una función: lista por días, qué es un nodo y cómo encaja búsqueda y detalle.",notes_n2_meta:"",notes_n2_soon:"En preparación — próximamente",notes_n3_series:"Serie · Parte 3 · Función",notes_n3_t:"Copia Pro y datos del nodo",notes_n3_sum:"Cómo se describe cada entrada en metadata.json y cómo se corresponde con la interfaz.",notes_n3_meta:"",notes_n3_soon:"En preparación — próximamente",
+    ft_desc:"Registra tu vida e inspiración cada día.",ft_prod:"Producto",ft_feat:"Funciones",ft_mem:"Curva de memoria",ft_notes:"Notas de uso",ft_pro:"Pro",ft_dl:"Descargar",ft_sup:"Soporte",ft_faq:"FAQ",ft_contact:"Contacto",ft_priv:"Privacidad",ft_lang:"Idioma",
     ft_copy:"© 2026 Snapline Diary.",ft_priv2:"Privacidad",ft_sup2:"Soporte",
     n_dl_soon:"Próximamente",h_eye_soon:"Próximamente en App Store",
     h_dl_soon:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Próximamente',
@@ -1376,7 +1441,7 @@ const STR = {
     toast_coming:"La app está en revisión en el App Store. La descarga estará disponible al aprobarse. Gracias por tu interés."
   },
   fr:{
-    appName:"Journal Chronologie",n_feat:"Fonctionnalités",n_mem:"Courbe de mémoire",n_case:"Cas d'usage",n_aud:"Pour qui ?",n_pro:"Pro",n_faq:"FAQ",n_dl:"Télécharger",
+    appName:"Journal Chronologie",n_feat:"Fonctionnalités",n_mem:"Courbe de mémoire",n_case:"Cas d'usage",n_notes:"Carnet d'usage",n_aud:"Pour qui ?",n_pro:"Pro",n_faq:"FAQ",n_dl:"Télécharger",
     h_eye:"Disponible sur l'App Store",h_title:"Capturez l'instant.<br>Faites durer<br><em>ce qui compte</em>.",
     h_sub:"Journal Chronologie est conçu pour <strong>la capture photo-texte et la révision à long terme</strong>. Connectez captures, photos et notes sur une chronologie — des étiquettes colorées organisent tout, et une courbe de mémoire scientifique vous assure de ne jamais oublier l'essentiel.",
     h_dl:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Télécharger sur l\'App Store',
@@ -1420,7 +1485,8 @@ const STR = {
     pr_btn:"Débloquer Pro →",pr_hint:"Achat unique · Sans abonnement · Partage familial",
     lg_t:"Disponible en 5 langues dans le monde",
     fq_eye:"FAQ",fq_h:"Des <em>questions ?</em><br>Les réponses.",fq_d:"Si vous ne trouvez pas votre réponse, <a href='mailto:neonyanbb@foxmail.com'>écrivez-nous</a> et nous vous répondrons rapidement.",fq_em:"→ Envoyer un email",
-    ft_desc:"Capturez votre vie et vos inspirations chaque jour.",ft_prod:"Produit",ft_feat:"Fonctionnalités",ft_mem:"Courbe",ft_pro:"Pro",ft_dl:"Télécharger",ft_sup:"Support",ft_faq:"FAQ",ft_contact:"Contact",ft_priv:"Confidentialité",ft_lang:"Langue",
+    notes_eye:"Carnet d'usage",notes_h:"Conseils d'usage<br><em>des fonctions aux habitudes</em>",notes_d:"De <strong>pourquoi c'est conçu ainsi</strong> aux <strong>méthodes et habitudes sur la durée</strong> — articles longs du fondateur : <strong>récit et pistes</strong>, plus <strong>des gestes concrets à essayer</strong>, mis à jour au fil du temps.",notes_more:"Voir toutes les notes →",notes_n1_series:"Série · Partie 1 · Vue d'ensemble",notes_n1_t:"L'attention à l'ère de la fragmentation : de « plus vide après le scroll » à « chaque vue compte » — avec Snapline Diary, faites du fil une matière pour votre croissance personnelle",notes_n1_sum:"Surcharge d'infos et attention morcelée : plutôt que de lutter contre l'écran, enregistrez sur la chronologie ce qui mérite une pause — avec traitement léger et courbe de mémoire.",notes_n1_meta:"~15 min",notes_n2_series:"Série · Partie 2 · Fonction",notes_n2_t:"Accueil chronologique et entrées",notes_n2_sum:"Un article, une fonction : le fil par jour, ce qu'est une entrée, et le lien avec recherche et détail.",notes_n2_meta:"",notes_n2_soon:"Rédaction en cours — bientôt",notes_n3_series:"Série · Partie 3 · Fonction",notes_n3_t:"Sauvegarde Pro et données d'entrée",notes_n3_sum:"Comment chaque entrée apparaît dans metadata.json et comment les champs correspondent à l'interface.",notes_n3_meta:"",notes_n3_soon:"Rédaction en cours — bientôt",
+    ft_desc:"Capturez votre vie et vos inspirations chaque jour.",ft_prod:"Produit",ft_feat:"Fonctionnalités",ft_mem:"Courbe",ft_notes:"Carnet d'usage",ft_pro:"Pro",ft_dl:"Télécharger",ft_sup:"Support",ft_faq:"FAQ",ft_contact:"Contact",ft_priv:"Confidentialité",ft_lang:"Langue",
     ft_copy:"© 2026 Snapline Diary.",ft_priv2:"Confidentialité",ft_sup2:"Support",
     n_dl_soon:"Bientôt",h_eye_soon:"Bientôt sur l'App Store",
     h_dl_soon:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Bientôt disponible',
@@ -1428,7 +1494,7 @@ const STR = {
     toast_coming:"L'application est en cours d'examen sur l'App Store. Le téléchargement sera ouvert après validation."
   },
   ru:{
-    appName:"Таймлайн Дневник",n_feat:"Функции",n_mem:"Кривая памяти",n_case:"Применение",n_aud:"Кому подойдёт",n_pro:"Pro",n_faq:"FAQ",n_dl:"Скачать",
+    appName:"Таймлайн Дневник",n_feat:"Функции",n_mem:"Кривая памяти",n_case:"Применение",n_notes:"Заметки об использовании",n_aud:"Кому подойдёт",n_pro:"Pro",n_faq:"FAQ",n_dl:"Скачать",
     h_eye:"Доступно в App Store",h_title:"Запечатлейте момент.<br>Пусть <em>важное</em><br>остаётся навсегда.",
     h_sub:"Таймлайн Дневник создан для <strong>записи фото и текста с долгосрочным повторением</strong>. Соединяйте скриншоты, фото и заметки в хронологию — цветные теги организуют всё, а научная кривая памяти гарантирует, что вы не забудете важное.",
     h_dl:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Скачать в App Store',
@@ -1472,7 +1538,8 @@ const STR = {
     pr_btn:"Разблокировать Pro →",pr_hint:"Разовая покупка · Без подписки · Семейный доступ",
     lg_t:"Доступно на 5 языках по всему миру",
     fq_eye:"FAQ",fq_h:"Есть <em>вопросы?</em><br>Вот ответы.",fq_d:"Если не нашли ответ — <a href='mailto:neonyanbb@foxmail.com'>напишите нам</a>, ответим быстро.",fq_em:"→ Написать",
-    ft_desc:"Записывайте жизнь и вдохновение каждый день.",ft_prod:"Продукт",ft_feat:"Функции",ft_mem:"Кривая памяти",ft_pro:"Pro",ft_dl:"Скачать",ft_sup:"Поддержка",ft_faq:"FAQ",ft_contact:"Контакты",ft_priv:"Конфиденциальность",ft_lang:"Язык",
+    notes_eye:"Заметки об использовании",notes_h:"Опыт использования<br><em>от функций к привычкам</em>",notes_d:"От <strong>зачем приложение сделано именно так</strong> к <strong>методам и привычкам при длительном использовании</strong> — развёрнутые заметки от создателя: и <strong>история с выводами</strong>, и <strong>конкретные шаги, которые можно попробовать</strong>, с обновлениями со временем.",notes_more:"Все заметки →",notes_n1_series:"Серия · Часть 1 · Обзор",notes_n1_t:"Внимание в эпоху фрагментации: от «пустее после ленты» к «каждый просмотр на счету» — Snapline Diary превращает поток в питание для личного роста",notes_n1_sum:"Перегруз информации и рассыпанное внимание: вместо борьбы с экраном сохраняйте в таймлайне то, на чём стоит остановиться — с лёгкой обработкой и кривой памяти.",notes_n1_meta:"~15 мин",notes_n2_series:"Серия · Часть 2 · Функция",notes_n2_t:"Главный экран и записи",notes_n2_sum:"Одна статья — одна функция: лента по дням, что такое запись и как связаны поиск и детали.",notes_n2_meta:"",notes_n2_soon:"Готовится — скоро",notes_n3_series:"Серия · Часть 3 · Функция",notes_n3_t:"Pro-резервная копия и поля записи",notes_n3_sum:"Как запись выглядит в metadata.json и как поля соответствуют интерфейсу.",notes_n3_meta:"",notes_n3_soon:"Готовится — скоро",
+    ft_desc:"Записывайте жизнь и вдохновение каждый день.",ft_prod:"Продукт",ft_feat:"Функции",ft_mem:"Кривая памяти",ft_notes:"Заметки об использовании",ft_pro:"Pro",ft_dl:"Скачать",ft_sup:"Поддержка",ft_faq:"FAQ",ft_contact:"Контакты",ft_priv:"Конфиденциальность",ft_lang:"Язык",
     ft_copy:"© 2026 Snapline Diary.",ft_priv2:"Конфиденциальность",ft_sup2:"Поддержка",
     n_dl_soon:"Скоро",h_eye_soon:"Скоро в App Store",
     h_dl_soon:'<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Скоро',
