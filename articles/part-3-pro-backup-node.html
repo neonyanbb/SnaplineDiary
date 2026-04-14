@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro 备份里，一条节点长什么样 · 用法手记 · 时线日记</title>
+<meta name="description" content="官网手记其三：通过 metadata.json 对照一条节点在备份里的字段结构，以及图、备注、链接、标签、多图与记忆曲线的对应关系。">
+<link rel="canonical" href="https://www.snaplinediary.cn/articles/part-3-pro-backup-node.html">
+<meta property="og:site_name" content="时线日记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.snaplinediary.cn/articles/part-3-pro-backup-node.html">
+<meta property="og:title" content="Pro 备份里，一条节点长什么样">
+<meta property="og:description" content="官网手记其三：通过 metadata.json 对照一条节点在备份里的字段结构，以及图、备注、链接、标签、多图与记忆曲线的对应关系。">
+<meta property="og:image" content="https://www.snaplinediary.cn/images/sharp-webp/iphone8-lg.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pro 备份里，一条节点长什么样">
+<meta name="twitter:description" content="官网手记其三：通过 metadata.json 对照一条节点在备份里的字段结构，以及图、备注、链接、标签、多图与记忆曲线的对应关系。">
+<meta name="twitter:image" content="https://www.snaplinediary.cn/images/sharp-webp/iphone8-lg.webp">
+<link rel="icon" type="image/png" href="../images/sharp/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<link rel="stylesheet" href="../site-chrome.css">
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXT22LMJ5F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NXT22LMJ5F');
+</script>
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?211eccc831448e9e7e691fee321f39ae";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body class="art-lang-zh" data-site-root="..">
+<nav id="site-main-nav">
+  <div class="nav-backdrop" aria-hidden="true"></div>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <img src="../images/sharp-webp/logo-68.webp" alt="" width="34" height="34" loading="eager" decoding="async">
+      <span class="nav-brand" data-i18n="appName">时线日记</span>
+    </a>
+    <button type="button" class="nav-toggle" id="site-nav-toggle" aria-expanded="false" aria-label="打开菜单" onclick="siteChromeToggleNav()">☰</button>
+    <ul class="nav-links" id="site-nav-links">
+      <li><a onclick="siteChromeGoTo('features')" data-i18n="n_feat">功能</a></li>
+      <li><a onclick="siteChromeGoTo('memory')" data-i18n="n_mem">记忆曲线</a></li>
+      <li><a onclick="siteChromeGoTo('notes')" data-i18n="n_notes">用法手记</a></li>
+      <li><a class="nav-cta" onclick="siteChromeOpenDownload()" data-i18n="n_dl">立即下载</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="art-shell w chrome-page-pad">
+  <nav class="art-crumb" aria-label="breadcrumb">
+    <a href="../index.html">首页</a> · <a href="index.html">用法手记</a> · <span>正文</span>
+  </nav>
+
+  <h1 class="art-h1">Pro 备份里，一条节点长什么样：用 metadata 对照界面</h1>
+  <p class="art-meta">系列 · 其三 · 功能篇 · 备份与节点数据 · 约 15 分钟 · 2026-04-11</p>
+
+  <div class="art-prose" data-prose-lang="zh">
+    <p>本篇聚焦数据层：当你导出 Pro 本地备份后，如何从 <code>metadata.json</code> 看懂一条节点，并与 App 里的图、备注、链接、标签、多图和记忆曲线逐项对上号。</p>
+
+    <h2>一、备份字段与界面对照</h2>
+    <ul>
+      <li><code>id</code>：节点唯一标识。</li>
+      <li><code>timestamp</code> / <code>createdDate</code>：记录时间。</li>
+      <li><code>imagePath</code>：图片文件名；多图用 <code>|</code> 连接。</li>
+      <li><code>note</code>：备注正文（可含链接）。</li>
+      <li><code>tags</code>：标签数组。</li>
+      <li><code>memoryCurveItems</code>：记忆曲线进度（按节点 id 关联）。</li>
+    </ul>
+
+    <h2>二、三类节点样例</h2>
+    <h3>1）视频/知识向</h3>
+    <p>常见结构是：多图 + 摘要备注 + 来源链接 + 主题标签。回到详情页可直接点击链接回源。</p>
+    <h3>2）文章/深度稿</h3>
+    <p>常见结构是：关键信息截图 + 观点备注 + 原文链接 + 分类标签。</p>
+    <h3>3）生活/灵感类</h3>
+    <p>常见结构是：多图 + 当下感受 + 自定义标签，后续按时间线或按标签都能回看。</p>
+
+    <h2>三、从操作到备份的顺序</h2>
+    <ol>
+      <li>主页新建节点或分享扩展收集素材。</li>
+      <li>补备注与链接、添加标签。</li>
+      <li>按需加入记忆曲线。</li>
+      <li>Pro 导出备份，得到 <code>metadata.json</code> 与图片文件。</li>
+    </ol>
+
+    <h2>四、小结</h2>
+    <p>一条节点在界面里是「图 + 文 + 标签 + 时间」，在备份里是结构化字段。理解字段后，你就能在换机、归档和验数时更有把握。</p>
+  </div>
+
+  <section class="art-share" aria-labelledby="art-share-h">
+    <h2 class="art-share-t" id="art-share-h" data-i18n="share_title">分享本文</h2>
+    <div class="art-share-row art-share-row--centered">
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="wechat"><img src="share-icons/wechat-moments.svg" alt="" width="28" height="28"><span class="art-share-lbl">朋友圈</span></button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="weibo"><img src="share-icons/weibo.svg" alt="" width="28" height="28"><span class="art-share-lbl">微博</span></button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="douban"><img src="share-icons/douban.svg" alt="" width="28" height="28"><span class="art-share-lbl">豆瓣</span></button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="copy"><img src="share-icons/link-copy-light.svg" alt="" width="26" height="26"><span class="art-share-lbl">复制链接</span></button>
+    </div>
+  </section>
+
+  <div class="art-end-cta">
+    <p>在官网了解全部功能与定价，一键跳转 App Store。</p>
+    <div class="art-end-row">
+      <a class="art-btn" href="https://apps.apple.com/app/%E6%97%B6%E7%BA%BF%E6%97%A5%E8%AE%B0/id6760802186" target="_blank" rel="noopener">App Store 下载</a>
+      <a class="art-btn-ghost" href="index.html">手记列表</a>
+      <a class="art-btn-ghost" href="../index.html">返回首页</a>
+    </div>
+  </div>
+</article>
+
+<footer class="site-foot">
+  <div class="w"><div class="foot-bot"><span class="foot-copy">© 2026 时线日记 (Snapline Diary). All rights reserved.</span></div></div>
+</footer>
+
+<div id="soon-toast" class="soon-toast" role="status" aria-live="polite"></div>
+<div id="wx-share-modal" class="art-modal" role="dialog" aria-modal="true" aria-labelledby="wx-share-modal-title" aria-hidden="true" hidden>
+  <div class="art-modal-bg" data-wx-close tabindex="-1"></div>
+  <div class="art-modal-panel">
+    <button type="button" class="art-modal-x" data-wx-close>×</button>
+    <h3 class="art-modal-h" id="wx-share-modal-title">分享到朋友圈</h3>
+    <p class="art-modal-tip">请在微信内置浏览器中打开，再通过右上角「···」分享。</p>
+    <div class="art-modal-qr"><img id="wx-share-qr" width="200" height="200" alt="" decoding="async"></div>
+    <button type="button" class="art-btn art-modal-copy" data-share="copy">复制链接</button>
+  </div>
+</div>
+<div id="art-share-toast" class="art-share-toast" role="status" aria-live="polite"></div>
+<script src="site-i18n.js" defer></script>
+<script src="../site-chrome.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="part2_doc_title">【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线 · 用法手记 · 时线日记</title>
+<meta name="description" content="新建节点功能全貌：双入口（分享扩展与主页新建）、图片添加、封面拖拽、备注与链接识别、标签推荐、快速编辑与保存回主页。" data-i18n-content="part2_meta_desc">
+<link rel="canonical" href="https://www.snaplinediary.cn/articles/part-2-create-node.html">
+<meta property="og:site_name" content="时线日记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.snaplinediary.cn/articles/part-2-create-node.html">
+<meta property="og:title" content="【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线">
+<meta property="og:description" content="新建节点功能全貌：双入口（分享扩展与主页新建）、图片添加、封面拖拽、备注与链接识别、标签推荐、快速编辑与保存回主页。">
+<meta property="og:image" content="https://www.snaplinediary.cn/articles/images/part-1/IMG_9953.840.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线">
+<meta name="twitter:description" content="新建节点功能全貌：双入口（分享扩展与主页新建）、图片添加、封面拖拽、备注与链接识别、标签推荐、快速编辑与保存回主页。">
+<meta name="twitter:image" content="https://www.snaplinediary.cn/articles/images/part-1/IMG_9953.840.webp">
+<link rel="icon" type="image/png" href="../images/sharp/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article.css">
+<link rel="stylesheet" href="../site-chrome.css">
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NXT22LMJ5F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NXT22LMJ5F');
+</script>
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?211eccc831448e9e7e691fee321f39ae";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body class="art-lang-zh" data-site-root="..">
+
+<div class="priv-pg" id="priv-pg" role="dialog" aria-modal="true" aria-labelledby="priv-title-h" aria-hidden="true" onclick="if(event.target===this)siteChromeClosePrivacy()">
+  <div class="priv-box">
+    <button type="button" class="priv-close" onclick="siteChromeClosePrivacy()" data-i18n-aria="modal_close_aria" aria-label="关闭">✕</button>
+    <div id="priv-body"></div>
+  </div>
+</div>
+
+<nav id="site-main-nav">
+  <div class="nav-backdrop" aria-hidden="true"></div>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <img src="../images/sharp-webp/logo-68.webp" alt="" width="34" height="34" loading="eager" decoding="async">
+      <span class="nav-brand" data-i18n="appName">时线日记</span>
+    </a>
+    <button type="button" class="nav-toggle" id="site-nav-toggle" aria-expanded="false" aria-label="打开菜单" onclick="siteChromeToggleNav()">☰</button>
+    <ul class="nav-links" id="site-nav-links">
+      <li><a onclick="siteChromeGoTo('features')" data-i18n="n_feat">功能</a></li>
+      <li><a onclick="siteChromeGoTo('memory')" data-i18n="n_mem">记忆曲线</a></li>
+      <li><a onclick="siteChromeGoTo('cases')" data-i18n="n_case">使用场景</a></li>
+      <li><a onclick="siteChromeGoTo('notes')" data-i18n="n_notes">用法手记</a></li>
+      <li><a onclick="siteChromeGoTo('audience')" data-i18n="n_aud">适用人群</a></li>
+      <li><a onclick="siteChromeGoTo('pro')" data-i18n="n_pro">Pro 版本</a></li>
+      <li><a onclick="siteChromeGoTo('faq')" data-i18n="n_faq">常见问题</a></li>
+      <li>
+        <div class="lang-sw">
+          <button type="button" class="lang-btn">🌐 <span id="cur-lang-lbl">中文</span> ▾</button>
+          <div class="lang-dd">
+            <div class="lang-opt active" onclick="setLang('zh')" data-lang="zh">🇨🇳 中文</div>
+            <div class="lang-opt" onclick="setLang('en')" data-lang="en">🇺🇸 English</div>
+            <div class="lang-opt" onclick="setLang('es')" data-lang="es">🇪🇸 Español</div>
+            <div class="lang-opt" onclick="setLang('fr')" data-lang="fr">🇫🇷 Français</div>
+            <div class="lang-opt" onclick="setLang('ru')" data-lang="ru">🇷🇺 Русский</div>
+          </div>
+        </div>
+      </li>
+      <li><a class="nav-cta" onclick="siteChromeOpenDownload()" data-i18n="n_dl">立即下载</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="art-shell w chrome-page-pad">
+  <nav class="art-crumb" aria-label="breadcrumb">
+    <a href="../index.html" data-i18n="art_crumb_official">首页</a> · <a href="index.html" data-i18n="art_crumb_notes">用法手记</a> · <span data-i18n="art_crumb_body">正文</span>
+  </nav>
+
+  <h1 class="art-h1" data-i18n="part2_h1">【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线</h1>
+  <p class="art-meta" data-i18n="part2_meta">系列 · 其二 · 功能篇 · 新建节点 · 约 10 分钟 · 2026-04-14</p>
+
+  <div class="art-prose" data-prose-lang="zh">
+    <p>上一篇先把「为什么要记录」讲清，这一篇只做一件事：把「<strong>新建一条节点</strong>」讲透。</p>
+    <p>时线日记的新建流程本身很顺手；这一篇继续展开，不是为了放大上手难度，而是为了把功能全貌一次讲完整。下文会按这五个关键点依次说明：</p>
+    <ul>
+      <li>新建入口与进入路径；</li>
+      <li>图片添加与素材确认；</li>
+      <li>封面选择与拖拽排序；</li>
+      <li>备注能力与内容边界；</li>
+      <li>标签填写、推荐与快速编辑。</li>
+    </ul>
+    <p>这篇就按真实使用顺序，从入口到保存，一步一步走完。</p>
+
+    <h2>一、新建节点有两个入口</h2>
+    <p>你可以从两个地方进入新建流程：</p>
+    <ol>
+      <li><strong>App 主页右下角「+」</strong>：主动整理素材时使用（例如整理今天讲座的照片、旅行相册）。</li>
+      <li><strong>系统分享扩展</strong>：在别的 App 里看到内容，直接「分享到时线日记」（例如短视频截图、文章配图）。</li>
+    </ol>
+    <p>两者路径不同，但保存后的结果一致：都会生成一条新节点，进入主页时间线，按创建时刻归到当天。</p>
+    <blockquote>
+      <p><strong>小提示：</strong>时线日记当前在分享扩展里仅接收图片。如果你在系统分享时选中了视频，分享面板里可能找不到时线日记图标；改为仅选择图片后再分享即可。</p>
+    </blockquote>
+
+    <h2>二、页面里要做的事，其实就五步</h2>
+    <h3>1）添加照片</h3>
+    <p>新建节点先加图，再写字更顺手。你可以从系统相册选择图片，也可以在已选基础上继续补图；图片会以缩略图条展示，便于确认当前这条节点收了哪些素材。</p>
+
+    <h3>2）挑选封面（拖动排序）</h3>
+    <p>照片条支持拖拽排序，<strong>排在第一张的就是封面</strong>。</p>
+    <p>这点很实用：同一条节点里放多张图时，你可以把“最能代表这条内容”的一张拖到第一位，主页列表里就更好认。</p>
+
+    <h3>3）编写备注（支持格式）</h3>
+    <p>备注是纯文本输入，但日常够用：</p>
+    <ul>
+      <li>支持多行正文、自由换行；</li>
+      <li>支持 Emoji（比如 <code>🎯</code>、<code>✈️</code> 这类场景符号）；</li>
+      <li>支持直接粘贴链接，详情页里会做链接识别并可点击回源；</li>
+      <li>当前以纯文本记录为主，不提供 Markdown 富文本排版；</li>
+      <li>标签与正文分离管理，不会把正文里的普通 <code>#</code> 误当标签。</li>
+    </ul>
+    <p>你可以把它理解为：不做花哨富文本，但把“记录、回看、回源”这三件事做稳。</p>
+
+    <h3>4）填写标签（含自动推荐）</h3>
+    <p>标签输入支持两种动作：</p>
+    <ul>
+      <li>手动输入（空格/回车可连续提交多个标签）；</li>
+      <li>点推荐标签一键加入。</li>
+    </ul>
+    <blockquote>
+      <p><strong>小技巧：</strong>在标签输入框里直接输入标签词（前面不用加 <code>#</code>），输入空格或回车，就会生成多彩芯片标签。</p>
+    </blockquote>
+    <p>推荐逻辑不是随机给词，而是结合两类信息：</p>
+    <ol>
+      <li>你当前这条备注正文里出现的关键词；</li>
+      <li>你历史节点里已存在的标签类别与热度。</li>
+    </ol>
+    <p>所以它更像“从你自己的语料里给建议”，而不是外部词库硬塞。</p>
+
+    <h3>5）用快速编辑按钮（标签 / 粘贴）</h3>
+    <p>编辑区里有两个很关键的小按钮：</p>
+    <ul>
+      <li><strong>标签</strong>：点击后直接把焦点定位到标签输入框，减少手动点选；</li>
+      <li><strong>粘贴</strong>：直接读取系统剪贴板，把内容插入备注正文。</li>
+    </ul>
+    <p>这两个按钮的价值在于：你不用先点进输入框再找系统浮层，特别适合“边看边收”的快节奏场景。</p>
+
+    <h2>三、保存后会发生什么</h2>
+    <p>点击保存后，节点会写入本地数据并立即回到主页可见；通常会出现在当天分组靠前位置（最新时间）。</p>
+    <p>也就是说，你在分享扩展里收的，和你在主页「+」里建的，最终都在同一条时间线上统一管理。</p>
+
+    <h2>四、场景应用</h2>
+    <h3>场景 A：刷到有营养的视频内容，立刻落袋</h3>
+    <p>适合用<strong>分享扩展入口</strong>：</p>
+    <ol>
+      <li>在视频 App 截图或分享图片；</li>
+      <li>直接分享到时线日记；</li>
+      <li>备注里粘贴转写要点和视频链接；</li>
+      <li>补 2-4 个标签（如 <code>AI工具</code> <code>创业案例</code>）；</li>
+      <li>保存，之后在主页和标签目录都能找回。</li>
+    </ol>
+    <p>这样做的关键变化是：从“看过”变成“有证据地收下过”。</p>
+    <p class="fig">
+      <img
+        src="images/part-2/share-entry.840.webp"
+        srcset="images/part-2/share-entry.840.webp 840w, images/part-2/share-entry.webp 1320w"
+        sizes="(max-width: 920px) 90vw, 420px"
+        alt="场景 A：系统分享扩展中新建节点的界面示意"
+        width="1320"
+        height="2868"
+        loading="lazy"
+        decoding="async">
+    </p>
+
+    <h3>场景 B：整理系统性内容，做一次主题归档</h3>
+    <p>适合用<strong>主页「+」入口</strong>：</p>
+    <ul>
+      <li>听完一场讲座，把现场拍的要点图放进同一条节点；</li>
+      <li>一次旅行，把同主题景点照片放进一条节点；</li>
+      <li>封面拖成“代表图”，备注写自己的总结，再配主题标签。</li>
+    </ul>
+    <p>之后你在主页按时间看，或在标签下按主题看，都能形成完整脉络，而不是散在相册里。</p>
+    <p class="fig">
+      <img
+        src="images/part-2/home-entry.840.webp"
+        srcset="images/part-2/home-entry.840.webp 840w, images/part-2/home-entry.webp 1320w"
+        sizes="(max-width: 920px) 90vw, 420px"
+        alt="场景 B：从主页入口新建并整理同主题内容的界面示意"
+        width="1320"
+        height="2868"
+        loading="lazy"
+        decoding="async">
+    </p>
+
+    <h2>五、小结</h2>
+    <p>新建节点的核心不是“多一个输入页”，而是把收集动作变成一条稳定流程：</p>
+    <p><strong>双入口捕获 → 选图与封面 → 备注与链接 → 标签与推荐 → 保存回时间线</strong>。</p>
+    <p>如果说第一篇讲的是“为什么要把注意力收回来”，从本篇开始，我们就讲的是“收回来之后，手该怎么落下去”。</p>
+    <p>（完）</p>
+  </div>
+  <div class="art-prose" id="part2-mount-en" data-prose-lang="en"></div>
+  <div class="art-prose" id="part2-mount-es" data-prose-lang="es"></div>
+  <div class="art-prose" id="part2-mount-fr" data-prose-lang="fr"></div>
+  <div class="art-prose" id="part2-mount-ru" data-prose-lang="ru"></div>
+
+  <section class="art-share" aria-labelledby="art-share-h">
+    <h2 class="art-share-t" id="art-share-h" data-i18n="share_title">分享本文</h2>
+    <div class="art-share-row art-share-row--centered">
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="wechat" data-i18n-aria="share_wechat_aria">
+        <img src="share-icons/wechat-moments.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_moments">朋友圈</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="weibo" data-i18n-aria="share_weibo_aria">
+        <img src="share-icons/weibo.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_weibo">微博</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="douban" data-i18n-aria="share_douban_aria">
+        <img src="share-icons/douban.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_douban">豆瓣</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="x" data-i18n-aria="share_x_aria">
+        <img src="share-icons/x.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_x">X</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="facebook" data-i18n-aria="share_facebook_aria">
+        <img src="share-icons/facebook.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_facebook">Facebook</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="instagram" data-i18n-aria="share_instagram_aria">
+        <img src="share-icons/instagram.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_instagram">Instagram</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="linkedin" data-i18n-aria="share_linkedin_aria">
+        <img src="share-icons/linkedin.svg" alt="" width="28" height="28" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_linkedin">LinkedIn</span>
+      </button>
+      <button type="button" class="art-share-btn art-share-btn--stack" data-share="copy" data-i18n-aria="share_copy_aria">
+        <img src="share-icons/link-copy-light.svg" alt="" width="26" height="26" decoding="async">
+        <span class="art-share-lbl" data-i18n="share_lbl_copy">复制链接</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="art-end-cta">
+    <p data-i18n="art_end_p">在官网了解全部功能与定价，一键跳转 App Store。</p>
+    <div class="art-end-row">
+      <a class="art-btn" href="https://apps.apple.com/app/%E6%97%B6%E7%BA%BF%E6%97%A5%E8%AE%B0/id6760802186" target="_blank" rel="noopener" data-i18n="art_dl_btn">App Store 下载</a>
+      <a class="art-btn-ghost" href="index.html" data-i18n="art_notes_list">手记列表</a>
+      <a class="art-btn-ghost" href="../index.html" data-i18n="art_back_home">返回首页</a>
+    </div>
+  </div>
+</article>
+
+<footer class="site-foot">
+  <div class="w">
+    <div class="foot-grid">
+      <div>
+        <div class="fb-logo">
+          <img src="../images/sharp-webp/logo-68.webp" alt="" width="32" height="32">
+          <div class="fb-name" data-i18n="appName">时线日记</div>
+        </div>
+        <p class="fb-desc" data-i18n="ft_desc">把每天的生活与灵感记录下来，用科学提醒回看你的高光时刻。</p>
+      </div>
+      <div>
+        <div class="fc-title" data-i18n="ft_prod">产品</div>
+        <ul class="fc-links">
+          <li><a onclick="siteChromeGoTo('features')" data-i18n="ft_feat">功能介绍</a></li>
+          <li><a onclick="siteChromeGoTo('memory')" data-i18n="ft_mem">记忆曲线</a></li>
+          <li><a href="index.html" data-i18n="ft_notes">用法手记</a></li>
+          <li><a onclick="siteChromeGoTo('pro')" data-i18n="ft_pro">Pro 版本</a></li>
+          <li><a onclick="siteChromeOpenDownload()" data-i18n="ft_dl">App Store 下载</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fc-title" data-i18n="ft_sup">支持</div>
+        <ul class="fc-links">
+          <li><a onclick="siteChromeGoTo('faq')" data-i18n="ft_faq">常见问题</a></li>
+          <li><a href="mailto:neonyanbb@foxmail.com" data-i18n="ft_contact">联系我们</a></li>
+          <li><a onclick="siteChromeShowPrivacy()" data-i18n="ft_priv">隐私政策</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fc-title" data-i18n="ft_lang">语言</div>
+        <ul class="fc-links">
+          <li><a onclick="setLang('zh')" data-lang="zh">🇨🇳 中文</a></li>
+          <li><a onclick="setLang('en')" data-lang="en">🇺🇸 English</a></li>
+          <li><a onclick="setLang('es')" data-lang="es">🇪🇸 Español</a></li>
+          <li><a onclick="setLang('fr')" data-lang="fr">🇫🇷 Français</a></li>
+          <li><a onclick="setLang('ru')" data-lang="ru">🇷🇺 Русский</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="foot-copy" data-i18n="ft_copy">© 2026 时线日记 (Snapline Diary). All rights reserved.</span>
+      <div class="foot-legal">
+        <a onclick="siteChromeShowPrivacy()" data-i18n="ft_priv2">隐私政策</a>
+        <a href="mailto:neonyanbb@foxmail.com" data-i18n="ft_sup2">技术支持</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="soon-toast" class="soon-toast" role="status" aria-live="polite"></div>
+<div id="wx-share-modal" class="art-modal" role="dialog" aria-modal="true" aria-labelledby="wx-share-modal-title" aria-hidden="true" hidden>
+  <div class="art-modal-bg" data-wx-close tabindex="-1"></div>
+  <div class="art-modal-panel">
+    <button type="button" class="art-modal-x" data-wx-close data-i18n-aria="modal_close_aria">×</button>
+    <h3 class="art-modal-h" id="wx-share-modal-title" data-i18n="share_wechat_modal_title">分享到朋友圈</h3>
+    <p class="art-modal-tip" data-i18n-html="share_wechat_tip">用微信<strong>扫一扫</strong>在内置浏览器打开本页，再通过右上角「···」菜单<strong>分享到朋友圈</strong>或转发给好友；也可先点下方按钮<strong>复制链接</strong>，粘贴到微信会话。<br><br><small>在微信内打开该链接时，可展示标题、摘要与预览图（本页已配置 Open Graph 元数据）。<br><strong>说明：</strong>微信<strong>不向网页提供</strong>从系统浏览器（如 Safari）<strong>一键跳转到朋友圈发文界面</strong>的公开接口，因此需先在内置浏览器中打开本文，再通过「···」分享。</small></p>
+    <div class="art-modal-qr"><img id="wx-share-qr" width="200" height="200" alt="" decoding="async"></div>
+    <button type="button" class="art-btn art-modal-copy" data-share="copy" data-i18n="share_copy">复制链接</button>
+  </div>
+</div>
+<div id="art-share-toast" class="art-share-toast" role="status" aria-live="polite"></div>
+<script src="part-2-bodies-en.js" defer></script>
+<script src="part-2-bodies-es.js" defer></script>
+<script src="part-2-bodies-fr.js" defer></script>
+<script src="part-2-bodies-ru.js" defer></script>
+<script src="part-2-bodies-mount.js" defer></script>
+<script src="article-fig-progressive.js" defer></script>
+<script src="site-i18n.js" defer></script>
+<script src="../site-chrome.js" defer></script>
+</body>
+</html>

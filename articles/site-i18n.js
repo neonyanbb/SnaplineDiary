@@ -37,6 +37,9 @@
       part1_doc_title: '碎片化时代的注意力管理，从「刷完更空」到「看一个算一个」· 用法手记 · 时线日记',
       part1_meta_desc:
         '信息超载与算法推荐时代，如何不必只靠意志力对抗屏幕：用时线日记把碎片收成可追溯的节点；含 iPhone、iPad 与 Mac（Designed for iPad）、轻量加工、模板与记忆曲线。',
+      part2_doc_title: '【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线 · 用法手记 · 时线日记',
+      part2_meta_desc:
+        '新建节点功能全貌：双入口（分享扩展与主页新建）、图片添加、封面拖拽、备注与链接识别、标签推荐、快速编辑与保存回主页。',
       appName: '时线日记',
       n_feat: '功能',
       n_mem: '记忆曲线',
@@ -89,20 +92,22 @@
         '信息超载、注意力被切碎的年代：不靠硬扛戒屏，把值得停一下的收成时间线上的记录；辅以轻量加工与记忆曲线。',
       notes_n1_meta: '约 15 分钟',
       notes_n2_series: '系列 · 其二 · 功能篇',
-      notes_n2_t: '时间线主页与节点',
+      notes_n2_t: '【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线',
       notes_n2_sum:
-        '一篇讲清一个功能：按日时间线是什么、节点如何新建与浏览，以及与搜索、详情、标签、记忆曲线的衔接。',
-      notes_n2_meta: '',
-      notes_n2_soon: '更新中，敬请期待',
+        '从分享扩展与主页「+」双入口开始，讲清添加照片、拖拽封面、备注与链接、标签推荐、快速编辑与保存回主页。',
+      notes_n2_meta: '约 10 分钟',
+      notes_n2_soon: '',
       notes_n3_series: '系列 · 其三 · 功能篇',
       notes_n3_t: 'Pro 备份里，一条节点长什么样',
       notes_n3_sum:
         'metadata.json 字段与界面能力对照：图、备注、链接、标签、多图与 memoryCurveItems；附真实备份样例。',
-      notes_n3_meta: '',
-      notes_n3_soon: '更新中，敬请期待',
+      notes_n3_meta: '约 15 分钟',
+      notes_n3_soon: '敬请期待',
       part1_h1:
         '碎片化时代的注意力管理，从「刷完更空」到「看一个算一个」：用时线日记，把碎片信息流变成个人成长的养分',
       part1_meta: '系列 · 其一 · 全概（全面概括） · 约 15 分钟 · 2026-04-11',
+      part2_h1: '【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线',
+      part2_meta: '系列 · 其二 · 功能篇 · 新建节点 · 约 10 分钟 · 2026-04-14',
       part1_lead:
         '<p>我们正处在一个<strong>信息超载、节奏极快、注意力被算法、热搜与短视频切成碎片</strong>的时代。</p><p>你是不是也常觉得，屏划久了，人往往不是更满足，而是<strong>更空</strong>？</p><p>若<strong>不靠硬扛戒屏</strong>，这点<strong>注意力</strong>，又该<strong>怎么收、怎么留</strong>，才不至于刷完就散？</p><p>本文给出<strong>其中一种答法</strong>：我用「时线日记」，把值得停一下的那一刻<strong>落成记录、排进时间线</strong>，日后翻得回来；真要记进长期记忆的，再交给记忆曲线去排期。</p><p><strong>是否如此，不妨用你自己的划屏习惯验一验</strong>——<strong>往下读几段</strong>，对照日常刷屏时的感受即可。</p>',
       share_title: '分享本文',
@@ -139,6 +144,10 @@
       part1_doc_title: 'Attention in an age of fragmentation · Field Notes · Snapline Diary',
       part1_meta_desc:
         'When feeds fragment your attention: capture what deserves a pause on your timeline — iPhone, iPad, Mac (Designed for iPad), light processing, templates, and memory curve.',
+      part2_doc_title:
+        '[Snapline Diary] Create entries: two entry points, one flow to turn fragments into a timeline you can revisit · Field Notes · Snapline Diary',
+      part2_meta_desc:
+        'A complete walkthrough of creating an entry: two entry points (Share Extension and Home +), photo adding, cover reorder, note and link handling, tag recommendations, quick edit buttons, and saving back to Home.',
       appName: 'Snapline Diary',
       n_feat: 'Features',
       n_mem: 'Memory Curve',
@@ -193,20 +202,23 @@
         'When feeds fragment your attention: instead of fighting the screen, save what deserves a pause to your timeline — with light processing and the memory curve.',
       notes_n1_meta: '~15 min',
       notes_n2_series: 'Series · Part 2 · Feature',
-      notes_n2_t: 'Timeline home & entries',
+      notes_n2_t: '[Snapline Diary] Create entries: two entry points, one flow to turn fragments into a timeline you can revisit',
       notes_n2_sum:
-        'One article, one feature: the day-based feed, creating and browsing entries, and how search, detail, tags, and memory curve connect.',
-      notes_n2_meta: '',
-      notes_n2_soon: 'In progress — coming soon',
+        'Start from two entry points (Share Extension and Home +), then walk through adding photos, drag-reordering cover, notes and links, tag recommendations, quick edits, and save-to-home flow.',
+      notes_n2_meta: '~10 min',
+      notes_n2_soon: '',
       notes_n3_series: 'Series · Part 3 · Feature',
       notes_n3_t: 'What one entry looks like in a Pro backup',
       notes_n3_sum:
         'metadata.json fields vs the UI: images, notes, links, tags, multi-image, and memoryCurveItems — with a real backup sample.',
-      notes_n3_meta: '',
-      notes_n3_soon: 'In progress — coming soon',
+      notes_n3_meta: '~15 min',
+      notes_n3_soon: 'Coming soon',
       part1_h1:
         'Attention in an age of fragmentation: from “emptier after scrolling” to “every view counts” — use Snapline Diary to turn fragmented feeds into nutrients for personal growth',
       part1_meta: 'Series · Part 1 · Overview · ~15 min · Apr 11, 2026',
+      part2_h1:
+        '[Snapline Diary] Create entries: two entry points, one flow to turn fragments into a timeline you can revisit',
+      part2_meta: 'Series · Part 2 · Feature · Create Entries · ~10 min · Apr 14, 2026',
       part1_lead:
         '<p>We live in an age of <strong>information overload, relentless pace, and attention sliced up</strong> by algorithms, trends, and short video.</p><p>Do you often feel that after long scrolling you end up not more satisfied, but <strong>emptier</strong>?</p><p>If you <strong>don’t want to rely on sheer screen avoidance</strong>, how can you <strong>gather and keep</strong> that scarce <strong>attention</strong> so it doesn’t vanish the moment you look away?</p><p>Here is <strong>one answer</strong>: I use Snapline Diary to turn moments worth pausing on into <strong>records on a timeline</strong> I can revisit; what truly needs long-term memory goes to the <strong>memory curve</strong> schedule.</p><p><strong>See if it matches your own habits</strong> — <strong>read a few paragraphs below</strong> and compare with how you usually scroll.</p>',
       share_title: 'Share this article',
@@ -243,6 +255,10 @@
       part1_doc_title: 'Atención en la era de la fragmentación · Notas · Snapline Diary',
       part1_meta_desc:
         'Cuando los feeds fragmentan tu atención: guarda en la línea de tiempo lo que merece una pausa — iPhone, iPad, Mac, plantillas y curva de memoria.',
+      part2_doc_title:
+        '[Snapline Diary] Crear nodos: dos entradas, un flujo para convertir fragmentos en una línea de tiempo revisitable · Notas de uso · Snapline Diary',
+      part2_meta_desc:
+        'Guía completa para crear nodos: dos entradas (Extensión de compartir y + en Inicio), añadir fotos, reordenar portada, notas y enlaces, recomendaciones de etiquetas, edición rápida y guardado en Inicio.',
       appName: 'Snapline Diary',
       n_feat: 'Funciones',
       n_mem: 'Curva de memoria',
@@ -296,20 +312,23 @@
         'Con saturación de información y atención fragmentada: en lugar de forcejear con la pantalla, guarda en la línea de tiempo lo que merece una pausa.',
       notes_n1_meta: '~15 min',
       notes_n2_series: 'Serie · Parte 2 · Función',
-      notes_n2_t: 'Inicio con línea de tiempo y nodos',
+      notes_n2_t: '[Snapline Diary] Crear nodos: dos entradas, un flujo para convertir fragmentos en una línea de tiempo revisitable',
       notes_n2_sum:
-        'Un artículo, una función: lista por días, crear y revisar nodos, búsqueda, detalle, etiquetas y curva de memoria.',
-      notes_n2_meta: '',
-      notes_n2_soon: 'En preparación',
+        'Desde Extensión de compartir y + en Inicio, explica añadir fotos, arrastrar portada, notas y enlaces, recomendaciones de etiquetas, edición rápida y guardado en Inicio.',
+      notes_n2_meta: '~10 min',
+      notes_n2_soon: '',
       notes_n3_series: 'Serie · Parte 3 · Función',
       notes_n3_t: 'Cómo se ve una entrada en un backup Pro',
       notes_n3_sum:
         'Campos de metadata.json frente a la UI: imágenes, notas, enlaces, etiquetas, multi-imagen y memoryCurveItems.',
-      notes_n3_meta: '',
-      notes_n3_soon: 'En preparación',
+      notes_n3_meta: '~15 min',
+      notes_n3_soon: 'Próximamente',
       part1_h1:
         'Atención en la era de la fragmentación: de «más vacío tras el scroll» a «cada vista cuenta» — con Snapline Diary, convierte el feed en nutriente para tu crecimiento personal',
       part1_meta: 'Serie · Parte 1 · Panorama · ~15 min · 11 abr 2026',
+      part2_h1:
+        '[Snapline Diary] Crear nodos: dos entradas, un flujo para convertir fragmentos en una línea de tiempo revisitable',
+      part2_meta: 'Serie · Parte 2 · Función · Crear nodos · ~10 min · 14 abr 2026',
       part1_lead:
         '<p>Vivimos una era de <strong>sobrecarga de información, ritmo extremo y atención troceada</strong> por algoritmos, tendencias y vídeos cortos.</p><p>¿A menudo, tras mucho scroll, te sientes no más satisfecho, sino <strong>más vacío</strong>?</p><p>Si <strong>no quieres depender solo de dejar la pantalla</strong>, ¿cómo <strong>recoger y guardar</strong> esa <strong>atención</strong> para que no se disipe?</p><p><strong>Una respuesta</strong>: uso Snapline Diary para convertir lo que merece una pausa en <strong>registros en una línea de tiempo</strong>; lo que debe quedar en memoria larga va a la <strong>curva de memoria</strong>.</p><p><strong>Compruébalo con tus hábitos</strong> — <strong>lee unos párrafos</strong> y compáralo con tu forma de deslizar.</p>',
       share_title: 'Compartir',
@@ -346,6 +365,10 @@
       part1_doc_title: 'Attention à l’ère de la fragmentation · Carnet · Snapline Diary',
       part1_meta_desc:
         'Quand les flux morcellent l’attention : enregistrez sur la chronologie ce qui mérite une pause — iPhone, iPad, Mac, modèles et courbe de mémoire.',
+      part2_doc_title:
+        '[Snapline Diary] Créer un nœud : deux entrées, un seul flux pour transformer les fragments en chronologie consultable · Carnet d’usage · Snapline Diary',
+      part2_meta_desc:
+        'Guide complet de création d’un nœud : deux entrées (extension de partage et + accueil), ajout de photos, réorganisation de la couverture, notes et liens, recommandations de tags, édition rapide et sauvegarde sur l’accueil.',
       appName: 'Snapline Diary',
       n_feat: 'Fonctionnalités',
       n_mem: 'Courbe de mémoire',
@@ -399,20 +422,23 @@
         'Surcharge d’infos et attention morcelée : plutôt que de lutter contre l’écran, enregistrez sur la chronologie ce qui mérite une pause.',
       notes_n1_meta: '~15 min',
       notes_n2_series: 'Série · Partie 2 · Fonction',
-      notes_n2_t: 'Accueil chronologique et entrées',
+      notes_n2_t: '[Snapline Diary] Créer un nœud : deux entrées, un seul flux pour transformer les fragments en chronologie consultable',
       notes_n2_sum:
-        'Un article, une fonction : fil par jour, créer et parcourir les entrées, recherche, détail, étiquettes et courbe de mémoire.',
-      notes_n2_meta: '',
-      notes_n2_soon: 'Rédaction en cours',
+        'À partir de l’extension de partage et du + accueil : ajout de photos, couverture par glisser-déposer, notes et liens, recommandations de tags, édition rapide et sauvegarde sur l’accueil.',
+      notes_n2_meta: '~10 min',
+      notes_n2_soon: '',
       notes_n3_series: 'Série · Partie 3 · Fonction',
       notes_n3_t: 'À quoi ressemble une entrée dans une sauvegarde Pro',
       notes_n3_sum:
         'Champs metadata.json et interface : images, notes, liens, étiquettes, multi-images et memoryCurveItems.',
-      notes_n3_meta: '',
-      notes_n3_soon: 'Rédaction en cours',
+      notes_n3_meta: '~15 min',
+      notes_n3_soon: 'Bientôt disponible',
       part1_h1:
         'L’attention à l’ère de la fragmentation : de « plus vide après le scroll » à « chaque vue compte » — avec Snapline Diary, faites du fil une matière pour votre croissance personnelle',
       part1_meta: 'Série · Partie 1 · Vue d’ensemble · ~15 min · 11 avr. 2026',
+      part2_h1:
+        '[Snapline Diary] Créer un nœud : deux entrées, un seul flux pour transformer les fragments en chronologie consultable',
+      part2_meta: 'Série · Partie 2 · Fonction · Création de nœud · ~10 min · 14 avr. 2026',
       part1_lead:
         '<p>Nous vivons une époque de <strong>surcharge d’informations, rythme intense et attention découpée</strong> par algorithmes, tendances et vidéos courtes.</p><p>Souvent, après longtemps défiler, on n’est pas plus satisfait, mais <strong>plus vide</strong>.</p><p>Sans <strong>lutte frontale contre l’écran</strong>, comment <strong>recueillir et garder</strong> cette <strong>attention</strong> ?</p><p><strong>Une piste</strong> : avec Snapline Diary, je fige sur une <strong>chronologie</strong> ce qui mérite une pause ; ce qui doit entrer en mémoire longue passe par la <strong>courbe de mémoire</strong>.</p><p><strong>Voyez si cela vous parle</strong> — <strong>lisez quelques paragraphes</strong> et comparez à vos habitudes.</p>',
       share_title: 'Partager',
@@ -449,6 +475,10 @@
       part1_doc_title: 'Внимание в эпоху фрагментации · Заметки · Snapline Diary',
       part1_meta_desc:
         'Когда лента рассыпает внимание: сохраняйте в таймлайне то, на чём стоит остановиться — iPhone, iPad, Mac, шаблоны и кривая памяти.',
+      part2_doc_title:
+        '[Snapline Diary] Создание записи: два входа, один поток, чтобы превратить фрагменты в таймлайн для повторного просмотра · Заметки · Snapline Diary',
+      part2_meta_desc:
+        'Полный разбор создания записи: два входа (Share Extension и + на главной), добавление фото, выбор обложки перетаскиванием, заметки и ссылки, рекомендации тегов, быстрые кнопки и сохранение на главную.',
       appName: 'Snapline Diary',
       n_feat: 'Функции',
       n_mem: 'Кривая памяти',
@@ -502,20 +532,23 @@
         'Перегруз информации и рассыпанное внимание: вместо борьбы с экраном сохраняйте в таймлайне то, на чём стоит остановиться.',
       notes_n1_meta: '~15 мин',
       notes_n2_series: 'Серия · Часть 2 · Функция',
-      notes_n2_t: 'Главный экран и записи',
+      notes_n2_t: '[Snapline Diary] Создание записи: два входа, один поток, чтобы превратить фрагменты в таймлайн для повторного просмотра',
       notes_n2_sum:
-        'Одна статья — одна функция: лента по дням, создание и просмотр, поиск, детали, теги и кривая памяти.',
-      notes_n2_meta: '',
-      notes_n2_soon: 'Готовится',
+        'От Share Extension и + на главной: добавление фото, обложка перетаскиванием, заметки и ссылки, рекомендации тегов, быстрые правки и сохранение в ленту главной.',
+      notes_n2_meta: '~10 мин',
+      notes_n2_soon: '',
       notes_n3_series: 'Серия · Часть 3 · Функция',
       notes_n3_t: 'Как выглядит запись в Pro-резервной копии',
       notes_n3_sum:
         'Поля metadata.json и интерфейс: изображения, заметки, ссылки, теги, несколько фото и memoryCurveItems.',
-      notes_n3_meta: '',
-      notes_n3_soon: 'Готовится',
+      notes_n3_meta: '~15 мин',
+      notes_n3_soon: 'Скоро',
       part1_h1:
         'Внимание в эпоху фрагментации: от «пустее после ленты» к «каждый просмотр на счету» — Snapline Diary превращает поток в питание для личного роста',
       part1_meta: 'Серия · Часть 1 · Обзор · ~15 мин · 11 апр. 2026',
+      part2_h1:
+        '[Snapline Diary] Создание записи: два входа, один поток, чтобы превратить фрагменты в таймлайн для повторного просмотра',
+      part2_meta: 'Серия · Часть 2 · Функция · Создание записи · ~10 мин · 14 апр. 2026',
       part1_lead:
         '<p>Мы живём в эпоху <strong>перегруза информацией, сумасшедшего темпа и внимания, нарезанного</strong> алгоритмами, трендами и короткими видео.</p><p>Часто после долгого скролла чувствуешь не насыщение, а <strong>пустоту</strong>.</p><p>Если <strong>не опираться только на отказ от экрана</strong>, как <strong>собрать и удержать</strong> это <strong>внимание</strong>?</p><p><strong>Один ответ</strong>: я использую Snapline Diary, чтобы превращать моменты, на которых стоит остановиться, в <strong>записи на таймлайне</strong>; то, что нужно в долгую память, — в <strong>кривую памяти</strong>.</p><p><strong>Проверьте на своих привычках</strong> — <strong>прочитайте несколько абзацев</strong> ниже.</p>',
       share_title: 'Поделиться',
@@ -606,8 +639,9 @@
     var modal = document.getElementById('wx-share-modal');
     var qrImg = document.getElementById('wx-share-qr');
     var toast = document.getElementById('art-share-toast');
-    /** 正式域名：分享与 OG 一致，便于各平台抓取链接卡片（标题/摘要/图） */
-    var SHARE_ARTICLE_URL = 'https://www.snaplinediary.cn/articles/part-1-mindset.html';
+    /** 以 canonical 为准，缺省时回退当前 URL */
+    var canonicalEl = document.querySelector('link[rel="canonical"]');
+    var SHARE_ARTICLE_URL = (canonicalEl && canonicalEl.href) || location.href;
 
     function getMetaDescription() {
       var m = document.querySelector('meta[name="description"]');

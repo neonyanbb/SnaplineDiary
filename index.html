@@ -876,19 +876,16 @@ var _hmt = _hmt || [];
         <p class="note-prev-sum" data-i18n="notes_n1_sum">信息超载、注意力被切碎的年代：不靠硬扛戒屏，把值得停一下的收成时间线上的记录；辅以轻量加工与记忆曲线。</p>
         <div class="note-prev-meta" data-i18n="notes_n1_meta">约 15 分钟</div>
       </a>
-      <div class="note-prev-card note-prev-card--soon reveal" style="transition-delay:.08s" aria-disabled="true">
+      <a class="note-prev-card reveal" href="articles/part-2-create-node.html" style="transition-delay:.08s">
         <div class="note-prev-series" data-i18n="notes_n2_series">系列 · 其二 · 功能篇</div>
-        <div class="note-prev-t" data-i18n="notes_n2_t">时间线主页与节点</div>
-        <p class="note-prev-sum" data-i18n="notes_n2_sum">一篇一功能：主界面按日分组、节点是什么、与搜索和详情的挂钩。</p>
-        <div class="note-prev-meta" data-i18n="notes_n2_meta"></div>
-        <p class="note-prev-soon" data-i18n="notes_n2_soon">更新中，敬请期待</p>
-      </div>
+        <div class="note-prev-t" data-i18n="notes_n2_t">【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线</div>
+        <p class="note-prev-sum" data-i18n="notes_n2_sum">从分享扩展与主页「+」双入口开始，讲清添加照片、拖拽封面、备注与链接、标签推荐、快速编辑与保存回主页。</p>
+        <div class="note-prev-meta" data-i18n="notes_n2_meta">约 10 分钟</div>
+      </a>
       <div class="note-prev-card note-prev-card--soon reveal" style="transition-delay:.16s" aria-disabled="true">
         <div class="note-prev-series" data-i18n="notes_n3_series">系列 · 其三 · 功能篇</div>
         <div class="note-prev-t" data-i18n="notes_n3_t">Pro 备份与节点数据</div>
-        <p class="note-prev-sum" data-i18n="notes_n3_sum">metadata.json 里一条记录有哪些字段，如何与界面对照。</p>
-        <div class="note-prev-meta" data-i18n="notes_n3_meta"></div>
-        <p class="note-prev-soon" data-i18n="notes_n3_soon">更新中，敬请期待</p>
+        <p class="note-prev-soon" data-i18n="notes_n3_soon">敬请期待</p>
       </div>
     </div>
     <div class="notes-foot">
@@ -1585,6 +1582,14 @@ function setupLangTransitionTargets(){
     el.classList.add(batch);
   });
 }
+
+Object.assign(STR.zh, {
+  notes_n2_t: "【时线日记】新建节点：两个入口，一套流程，把碎片收成可回看的时间线",
+  notes_n2_sum: "从分享扩展与主页「+」双入口开始，讲清添加照片、拖拽封面、备注与链接、标签推荐、快速编辑与保存回主页。",
+  notes_n2_meta: "约 10 分钟",
+  notes_n2_soon: "",
+  notes_n3_soon: "敬请期待"
+});
 
 const SOON_I18N_KEYS = {n_dl:'n_dl_soon',h_eye:'h_eye_soon',h_dl:'h_dl_soon',fr_btn:'fr_btn_soon',pr_btn:'pr_btn_soon',ft_dl:'ft_dl_soon'};
 
