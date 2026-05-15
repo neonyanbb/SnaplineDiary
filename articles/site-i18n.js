@@ -33,7 +33,7 @@
     zh: {
       list_doc_title: '用法手记 · 时线日记',
       list_meta_desc:
-        '由创始人撰写的用法手记：从产品由来到设计取舍，到长期使用中的方法与习惯；含系列文章与更新计划。',
+        '由创始人撰写的用法手记：从产品由来到设计取舍，到长期使用中的方法与习惯；含系列文章、热点资讯入口与更新计划。',
       part1_doc_title: '碎片化时代的注意力管理，从「刷完更空」到「看一个算一个」· 用法手记 · 时线日记',
       part1_meta_desc:
         '信息超载与算法推荐时代，如何不必只靠意志力对抗屏幕：用时线日记把碎片收成可追溯的节点；含 iPhone、iPad 与 Mac（Designed for iPad）、轻量加工、模板与记忆曲线。',
@@ -142,7 +142,7 @@
     en: {
       list_doc_title: 'Field Notes · Snapline Diary',
       list_meta_desc:
-        'Long-form notes from the founder: why the app is built this way and how to use it well — series articles updated over time.',
+        'Long-form notes from the founder: why the app is built this way and how to use it well — series articles, a trending hub link, updated over time.',
       part1_doc_title: 'Attention in an age of fragmentation · Field Notes · Snapline Diary',
       part1_meta_desc:
         'When feeds fragment your attention: capture what deserves a pause on your timeline — iPhone, iPad, Mac (Designed for iPad), light processing, templates, and memory curve.',
@@ -255,7 +255,7 @@
     es: {
       list_doc_title: 'Notas de uso · Snapline Diary',
       list_meta_desc:
-        'Artículos largos del fundador: por qué está hecho así y cómo sacarle partido — serie actualizada con el tiempo.',
+        'Artículos largos del fundador: por qué está hecho así y cómo sacarle partido — serie con enlace al hub de tendencias y actualizaciones.',
       part1_doc_title: 'Atención en la era de la fragmentación · Notas · Snapline Diary',
       part1_meta_desc:
         'Cuando los feeds fragmentan tu atención: guarda en la línea de tiempo lo que merece una pausa — iPhone, iPad, Mac, plantillas y curva de memoria.',
@@ -367,7 +367,7 @@
     fr: {
       list_doc_title: 'Carnet d’usage · Snapline Diary',
       list_meta_desc:
-        'Articles longs du fondateur : pourquoi l’app est conçue ainsi et comment bien l’utiliser — série mise à jour dans le temps.',
+        'Articles longs du fondateur : pourquoi l’app est conçue ainsi et comment bien l’utiliser — série, lien vers l’espace tendances et mises à jour.',
       part1_doc_title: 'Attention à l’ère de la fragmentation · Carnet · Snapline Diary',
       part1_meta_desc:
         'Quand les flux morcellent l’attention : enregistrez sur la chronologie ce qui mérite une pause — iPhone, iPad, Mac, modèles et courbe de mémoire.',
@@ -479,7 +479,7 @@
     ru: {
       list_doc_title: 'Заметки об использовании · Snapline Diary',
       list_meta_desc:
-        'Развёрнутые заметки создателя: зачем приложение сделано так и как им пользоваться — серия со временем обновляется.',
+        'Развёрнутые заметки создателя: зачем приложение сделано так и как им пользоваться — серия, ссылка на тренды и обновления.',
       part1_doc_title: 'Внимание в эпоху фрагментации · Заметки · Snapline Diary',
       part1_meta_desc:
         'Когда лента рассыпает внимание: сохраняйте в таймлайне то, на чём стоит остановиться — iPhone, iPad, Mac, шаблоны и кривая памяти.',
@@ -631,6 +631,18 @@
       var k = meta.getAttribute('data-i18n-content');
       if (k) meta.setAttribute('content', s(k));
     });
+    if (document.body && document.body.getAttribute('data-page') === 'notes-list') {
+      function setMetaContent(sel, val) {
+        var el = document.querySelector(sel);
+        if (el) el.setAttribute('content', val);
+      }
+      setMetaContent('meta[property="og:title"]', s('list_doc_title'));
+      setMetaContent('meta[property="og:description"]', s('list_meta_desc'));
+      setMetaContent('meta[name="twitter:title"]', s('list_doc_title'));
+      setMetaContent('meta[name="twitter:description"]', s('list_meta_desc'));
+      var ogLoc = { zh: 'zh_CN', en: 'en_US', es: 'es_ES', fr: 'fr_FR', ru: 'ru_RU' };
+      setMetaContent('meta[property="og:locale"]', ogLoc[lang] || 'zh_CN');
+    }
     if (typeof window.refreshSiteChromeI18n === 'function') window.refreshSiteChromeI18n();
   }
 

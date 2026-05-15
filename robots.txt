@@ -1,0 +1,6 @@
+# https://snaplinediary.cn/robots.txt
+User-agent: *
+Allow: /
+
+# 热点子域由运营团队维护；若需单独策略可在 hot.snaplinediary.cn 部署独立 robots.txt
+Sitemap: https://snaplinediary.cn/sitemap.xml
